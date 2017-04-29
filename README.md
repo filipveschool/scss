@@ -1,6 +1,6 @@
 # scss
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/scss.svg?style=flat-square)](https://npmjs.com/package/scss)
+[![Latest Version on NPM](https://img.shields.io/npm/v/scss-boilerplate.svg?style=flat-square)](https://npmjs.com/package/scss-boilerplate)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 SCSS boilerplate with common functions, mixins, helpers and patterns to kickstart CSS authoring.
