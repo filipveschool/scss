@@ -1,0 +1,31 @@
+{
+  "name": "@filipveschool/scss",
+  "version": "1.0.0",
+  "description": "SCSS boilerplate with common functions, mixins, helpers, patterns, variables and external libraries",
+  "main": "settings.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipveschool/scss.git"
+  },
+  "keywords": [
+    "filipveschool",
+    "filipve",
+    "scss",
+    "mixins",
+    "helpers",
+    "patterns",
+    "variables",
+    "styles",
+    "sass",
+    "boilerplate"
+  ],
+  "author": "Filip Vanden Eynde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filipveschool/scss/issues"
+  },
+  "homepage": "https://github.com/filipveschool/scss#readme"
+}
