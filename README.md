@@ -75,9 +75,9 @@ $blue: (
 ```scss
 // my-app.scss
 
-@import '@spatie/scss/settings';
+@import 'scss-boilerplate/settings';
 @import 'my-custom-settings';
-@import '@spatie/scss/styles';
+@import 'scss-boilerplate/styles';
 
 h1 {
     @include font-secondary-bold;
@@ -103,7 +103,7 @@ The best postcards will get published on the open source page on our website.
 You can install the package via yarn:
 
 ```bash
-yarn add @spatie/scss
+yarn add scss-boilerplate
 ```
 
 ## Usage
@@ -113,8 +113,8 @@ yarn add @spatie/scss
 Import the base & styles file in your SCSS files.
 
 ```scss
-@import '@spatie/scss/settings';
-@import '@spatie/scss/styles';
+@import 'scss-boilerplate/settings';
+@import 'scss-boilerplate/styles';
 ```
 
 ### Overwriting defaults
@@ -126,7 +126,7 @@ Be sure to remove the `!default` flag for this variable.
 
 ```scss
 // your-app.scss
-@import '@spatie/scss/settings';
+@import 'scss-boilerplate/settings';
 
 // overwrite default settings
 $gutter: (
@@ -136,13 +136,12 @@ $gutter: (
     ...
 );
 
-@import '@spatie/scss/styles';
+@import 'scss-boilerplate/styles';
 ```
 
 ### Autoprefixing
 
 CSS properties are not vendor-prefixed. Running autoprefixer in your own build process is recommended.
-
 
 ## Documentation
 
@@ -159,19 +158,19 @@ This package implements the ideas from our [css-styleguide](https://github.com/s
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
-
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Willem Van Bockstal](https://github.com/willemvb)
+- [Filip Vanden Eynde](https://github.com/filipveschool)
 - [All Contributors](../../contributors)
 
-## About Spatie
+## About Filip
 
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+I am a student from Belgium who loves to develop with laravel, SCSS/SASS preprocessor and other languages.
+I speak Dutch, French and English. You can soon find an overview of all my open source projects [on my website which I will create at the end of June 2017](https://vandeneyndefilip.be/opensource).
 
 ## License
 
