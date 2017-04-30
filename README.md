@@ -5,6 +5,8 @@
 [![GitHub issues](https://img.shields.io/github/issues/filipveschool/scss.svg)](https://github.com/filipveschool/scss/issues)
 [![GitHub forks](https://img.shields.io/github/forks/filipveschool/scss.svg)](https://github.com/filipveschool/scss/network)
 [![GitHub stars](https://img.shields.io/github/stars/filipveschool/scss.svg)](https://github.com/filipveschool/scss/stargazers)
+[![npm](https://img.shields.io/npm/dt/scss-boilerplate.svg?style=flat-square)](https://npmjs.com/package/scss-boilerplate)
+
 
 
 
