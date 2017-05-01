@@ -1,0 +1,32 @@
+// ----------------------------------------------------------------------
+// pseudo auto
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @ignore @group margin
+////
+
+/// When using ::before and ::after you'll always need these three,
+//  so we're saving two lines of code every time you use this.
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    div::after {
+///     @include pseudo;
+///     top: -1rem; left: -1rem;
+///     width: 1rem; height: 1rem;
+///    }
+/// @url http://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// TODO voorbeelden geven

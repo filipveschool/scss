@@ -1,8 +1,167 @@
-/// Native `url(..)` function wrapper
-/// @param {String} $base - base URL for the asset
-/// @param {String} $type - asset type folder (e.g. `fonts/`)
-/// @param {String} $path - asset path
-/// @return {Url}
-@function asset($base, $type, $path) {
-  @return url($base + $type + $path);
-}
+@charset "UTF-8";
+
+$namespace_for_all_css_classes: 'filip';
+
+// FOR BEM STRUCTURE AND SYNTAX
+// URL: https://franzheidl.github.io/bemify/
+@import '../node_modules/bemify/sass/bemify';
+
+//http://susydocs.oddbird.net/en/latest/
+@import '../node_modules/susy/sass/susy';
+
+//https://github.com/at-import/breakpoint/wiki
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+//https://github.com/zellwk/mappy-breakpoints
+@import '../node_modules/mappy-breakpoints/mappy-breakpoints';
+
+//https://github.com/zellwk/typi
+@import '../node_modules/typi/scss/typi';
+
+//https://github.com/modularscale/modularscale-sass
+@import '../node_modules/modularscale-sass/stylesheets/modular-scale';
+//https://github.com/reimertz/brand-colors
+// @import "../node_modules/brand-colors/dist/latest/scss/brand-colors.latest";
+@import '../node_modules/brand-colors/dist/latest/scss/brand-colors.latest';
+
+// 1. Configuration and helpers
+
+@import 'util/settings-for-functions';
+@import 'util/functions';
+@import 'util/mixins';
+@import 'util/helpers';
+@import 'util/placeholders';
+@import 'util/variables';
+
+// 2. Vendors
+@import 'vendor/universal-border-box';
+@import 'vendor/normalize';
+
+//Config files for external libraries first
+@import 'vendor/config-files-for-libraries/susy-config';
+@import 'vendor/config-files-for-libraries/typi-config';
+@import 'vendor/config-files-for-libraries/mappy-breakpoints-config';
+@import 'vendor/config-files-for-libraries/breakpoint-sass-config';
+@import 'vendor/config-files-for-libraries/modular-scale-sass-config';
+
+// 3. Base stuff
+@import 'base/alignments';
+@import 'base/scaffolding';
+@import 'base/base';
+@import 'base/typography';
+//@import 'base/headings';
+@import 'base/helpers';
+@import 'components/code';
+
+// 4. Layout-related sections
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+
+// 5. Components
+@import 'components/image';
+@import 'components/forms';
+//@import "components/tables";
+//@import "components/comparison-table";
+@import 'components/button';
+@import 'base/component-animations';
+@import 'components/searchform-overlay';
+@import 'components/dropdown';
+@import 'components/topbar';
+@import 'components/logobar';
+@import 'components/navbar';
+@import 'components/navs';
+// Wordt niet gebruikt
+// @import 'components/_megamenu';
+// Wordt niet gebruikt
+//@import 'components/_breadcrumbs';
+
+//@import 'components/pagination';
+
+@import 'components/tooltips';
+@import 'components/popovers';
+//@import 'media/flexslider';
+@import 'media/isotope';
+//@import 'media/ilightbox';
+@import 'components/social';
+@import 'components/scroll-top';
+
+@import 'components/container';
+@import 'components/gap';
+@import 'components/clear';
+
+// Wordt niet gebruikt
+// @import "components/map";
+
+//@import "components/code";
+
+@import 'components/icon';
+@import 'components/block-grid';
+@import 'components/icon-list';
+@import 'components/video';
+//@import "components/responsive-slider";
+
+// Wordt niet gebruikt
+// @import "components/audio";
+
+@import 'components/search';
+@import 'components/counter';
+@import 'components/text-type';
+@import 'components/card';
+@import 'components/creative-cta';
+@import 'components/feature-box';
+@import 'components/feature-list';
+@import 'components/dropcap';
+@import 'components/horizontal-rule';
+@import 'components/highlight';
+@import 'components/quote';
+//@import "components/alert"; //TODO nog problemen in de ALERT
+@import 'components/image';
+@import 'components/text-columns';
+@import 'components/accordion';
+@import 'components/tabs';
+//@import "components/responsive-visibility";
+@import 'components/column';
+//@import "shortcodes/protected-content";
+//@import "components/blog//recent-posts";
+@import 'components/pricing-table';
+@import 'components/callout';
+@import 'components/promo';
+
+//@import "components/blog/post-author";
+
+// Wordt niet gebruikt
+// @import "components/prompt";
+
+// Wordt niet gebruikt
+// @import "components/entry-share";
+
+// Wordt niet gebruikt
+// @import "components/skill-bar";
+@import 'components/table-of-contents';
+@import 'components/custom-headline';
+@import 'components/feature-headline';
+@import 'layout/section';
+@import 'layout/sidebar';
+@import 'components/landmark-header';
+
+@import 'media/captions-and-galleries';
+
+// 6. Page-specific styles
+@import 'pages/home';
+@import 'pages/404-page';
+@import 'pages/contact';
+
+// 7. Themes
+@import 'themes/default';
+
+// Print Styles
+// =============================================================================
+
+// @import "themes/print";
+
+// @import 'base/fonts';
+
+// external css plugins imported as sass version
+
+//@import "~flag-icon-css/sass";

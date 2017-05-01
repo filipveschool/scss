@@ -1,0 +1,196 @@
+//--------------------------------------------------------------
+//   COLORS
+//    - Primary palette
+//    - Grayscale
+//    - Social Media Colors
+//       - $social-colors() map
+//
+//   ELEMENTS & SKINNING
+//     - General
+//     - Accessibility
+//     - Links
+//-------------------------------------------------------------
+
+// COLORS
+
+// Primary palette
+$color-blue: #21759B;
+$color-light-yellow: #FFF9C0;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+// otago polytechnic colors
+$op-white: #f0f1f1;
+$op-grey: #e3dfd7;
+
+
+//Color Palette Otago Polytechnic Recruitment App
+
+// color variable map
+$otago_polytechnic_colors: (
+    // nested map inception
+    //BLUE SERIES: AMBITION / CONTENT / STRATERY
+    blue_series: (
+        op_blue_rgb: rgb(0, 72, 152),
+        op_blue_hex: #004898,
+        op_cyan_rgb: rgb(29, 174, 234),
+        op_cyan_hex: #1DAEEA,
+        op_sky_rgb: rgb(95, 152, 213),
+        op_sky_hex: #5F98D5,
+    ),
+    //RED SERIES: PASSION / ENERGY / CREATIVE
+    red_series: (
+        op_energy_rgb: rgb(241, 184, 48),
+        op_energy_hex: #F1B830,
+        op_rosy_rgb: rgb(211, 78, 65),
+        op_rosy_hex: #D34E41,
+        op_passion_rgb: rgb(133, 50, 86),
+        op_passion_hex: #863257,
+    ),
+    //GREEN SERIES: YOUTH / GROWTH / FRESH
+    green_series: (
+        op_green_rgb: rgb(29, 174, 234),
+        op_green_hex: #A2CA22,
+        op_lightgreen_rgb_for_project_unofficial: rgb(158,192,48),
+        op_lightgreen_hex_for_project_unofficial: #9ec030,
+        op_growth_rgb: rgb(125, 158, 32),
+        op_growth_hex: #7D9E20,
+        op_youth_rgb: rgb(27, 125, 148),
+        op_youth_hex: #1B9D93,
+    ),
+    //WARM GREY SERIES ORGANIC / DEPTH / STABLE
+    warm_grey_series: (
+        op_grey_rgb: rgb(139, 127, 104),
+        op_grey_hex: #8B7F68,
+        op_copper_rgb: rgb(83, 70, 63),
+        op_copper_hex: #53453E,
+        op_walnut_rgb: rgb(104, 90, 92),
+        op_walnut_hex: #352F32,
+    ),
+    //COLD GREY SEREIS MATURE / FORMAL / ELEGANCE
+    cold_grey_series: (
+        //op_slate_grey_rgb: rgb(122, 177, 232),
+        op_slate_grey_rgb: rgb(115, 124, 138),
+        op_slate_grey_hex: #737C8A,
+        //op_violet_grey_rgb: rgb(60, 65, 77),
+        op_violet_grey_rgb: rgb(65, 64, 71),
+        op_violet_grey_hex: #414047,
+        //op_storm_grey_rgb: rgb(103, 108, 115),
+        op_storm_grey_rgb: rgb(83, 90, 95),
+        op_storm_grey_hex: #535A5F,
+    ),
+    // aLL KINDS OF BLACK
+    black_series: (
+        op_black_rgb: rgb(0, 0, 0),
+        op_black_hex: #000000,
+        //op_rosy_rgb: rgb(211, 78, 65),
+        //op_rosy_hex: #D34E41,
+        //op_passion_rgb: rgb(133, 50, 86),
+        //op_passion_hex: #863257,
+    ),
+);
+
+// now we use the function
+//h1 {
+//    color: color(blue_series, op_blue_rgb);
+//}
+
+// ===========================
+
+//
+// Grayscale.
+//
+
+$black: #000 !default;
+$grayDarker: #222 !default;
+$grayDark: #333 !default;
+$gray: #555 !default;
+$grayLight: #999 !default;
+$grayLighter: #eee !default;
+$white: #fff !default;
+$whiteSmoke: #f1f1f1 !default;
+
+// Grayscale
+$color-gray: #808080;
+$color-cod-gray: #111111;
+$color-mineshaft: #333333;
+$color-dove-gray: #666666;
+$color-gray-alt: #929292;
+$color-silver-chalice: #AAAAAA;
+$color-silver: #CCCCCC;
+$color-alto: #DDDDDD;
+$color-gallery: $grayLighter;
+$color-whitesmoke: $whiteSmoke;
+
+//
+// General Accent Colors.
+//
+
+$blue: #049cdb !default;
+$blueDark: #0064cd !default;
+$green: #46a546 !default;
+$red: #9d261d !default;
+$yellow: #ffc40d !default;
+$orange: #f89406 !default;
+$pink: #c3325f !default;
+$purple: #7a43b6 !default;
+
+// Social Media Colors
+//$color-facebook: #3B5998;
+$color-facebook: $bc-facebook;
+
+//$color-github: #333333;
+$color-github: $bc-github-4;
+
+//$color-googleplus: #DD4B39;
+$color-googleplus: $bc-googleplus;
+
+//$color-instagram: #517FA4;
+$color-instagram: $bc-instagram;
+
+//$color-linkedin: #007BB6;
+$color-linkedin: $bc-linkedin-6;
+
+//$color-pinterest: #CB2027;
+$color-pinterest: $bc-pinterest;
+
+//$color-rss: #FF9900;
+$color-rss: $bc-rss;
+
+//$color-twitter: #00ACED;
+//$color-twitter: #00Abf0;
+$color-twitter: $bc-twitter;
+
+//$color-yelp: #af0606;
+$color-yelp: $bc-yelp;
+
+//$color-youtube: #BB0000;
+//$color-youtube: #cd201f;
+$color-youtube: $bc-youtube;
+
+// $social-colors() map
+$social-colors: (
+    facebook: $color-facebook,
+    facebook-square: $color-facebook,
+    googleplus: $color-googleplus,
+    googleplus-square: $color-googleplus,
+    instagram: $color-instagram,
+    instagram-square: $color-instagram,
+    linkedin: $color-linkedin,
+    linkedin-square: $color-linkedin,
+    pinterest: $color-pinterest,
+    pinterest-square: $color-pinterest,
+    rss: $color-rss,
+    rss-square: $color-rss,
+    twitter: $color-twitter,
+    twitter-square: $color-twitter,
+    youtube: $color-youtube,
+    youtube-square: $color-youtube,
+);
+
+// ELEMENTS & SKINNING
+
+// Accessibility
+$color-background-screen-reader: $color-whitesmoke;
+$color-text-screen-reader: $color-blue;
+

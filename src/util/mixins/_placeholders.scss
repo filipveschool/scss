@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------------
+// Responsive ratio
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @ignore @group margin
+////
+
+/// We use this for creating scalable elements (usually images / background images) that maintain a ratio.
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    input,
+///    textarea {
+///        @include input-placeholder {
+///        color: $grey;
+///        }
+///   }
+///
+/// @url http://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// TODO voorbeelden geven

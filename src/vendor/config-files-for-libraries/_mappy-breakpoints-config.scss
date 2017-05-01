@@ -1,0 +1,6 @@
+$mappy-queries: (
+  ipadportrait: mappy-bp(max-width ipadportrait),
+  tablet: mappy-bp(max-width tablet),
+  ipadlandscape: mappy-bp(max-width ipadlandscape),
+  tablet_wide: mappy-bp(max-width tablet_wide),
+);

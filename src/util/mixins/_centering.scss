@@ -1,0 +1,103 @@
+// ----------------------------------------------------------------------
+// Margin auto
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @ignore @group margin
+////
+
+/// Horizontally center a block element
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .center-my-block-thingie {
+///        display: block;
+///        margin-left: auto;
+///        margin-right: auto;
+///    }
+
+@mixin margin-auto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/// Horizontally center a block element
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .center-my-block-thingie {
+///        display: block;
+///        margin-left: auto;
+///        margin-right: auto;
+///    }
+
+@mixin horizontal-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+//TODO alles nog juist aanpassen hieronder
+/// Vertical center a block element
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .center-my-block-thingie {
+///        display: block;
+///        margin-left: auto;
+///        margin-right: auto;
+///    }
+
+
+@mixin v-center {
+    @include position(relative, 50% nil nil nil);
+    transform: translateY(-50%);
+}
+
+// ----------------------------------------------------------------------
+// Push auto
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @ignore @group margin
+////
+
+/// To quickly centre a block element without having to worry about if there is any top or bottom margin already applied.
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .center-my-block-thingie {
+///        display: block;
+///        margin-left: auto;
+///        margin-right: auto;
+///    }
+/// @url http://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// TODO voorbeelden geven

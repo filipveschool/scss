@@ -1,0 +1,374 @@
+/// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include margin(null 10px 3em 20vh);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-bottom: 3em;
+///     margin-left: 20vh;
+///     margin-right: 10px;
+///   }
+///
+/// @require {mixin} directional-property
+///
+/// @output `margin`
+@mixin flex-display {
+  // display:-webkit-box;
+  // display:-moz-box;
+  // display:-ms-flexbox;
+  display: flex;
+}
+
+@mixin inline-flex-display {
+  // display:-webkit-inline-box;
+  // display:-moz-inline-box;
+  // display:-ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include margin(null 10px 3em 20vh);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-bottom: 3em;
+///     margin-left: 20vh;
+///     margin-right: 10px;
+///   }
+///
+/// @require {mixin} directional-property
+///
+/// @output `margin`
+@mixin flex-direction-row() {
+  // deprecated these 3 lines
+  // -webkit-flex-direction:$direction;
+  // -moz-flex-direction:$direction;
+  // -ms-flex-direction:$direction;
+
+  // -webkit-box-orient: horizontal;
+  // -webkit-box-direction: normal;
+  // -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@mixin flex-direction-row-reverse() {
+  // deprecated these 3 lines
+  // -webkit-flex-direction:$direction;
+  // -moz-flex-direction:$direction;
+  // -ms-flex-direction:$direction;
+
+  // -webkit-box-orient: horizontal;
+  // -webkit-box-direction: reverse;
+  // -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+@mixin flex-direction-column() {
+  // deprecated these 3 lines
+  // -webkit-flex-direction:$direction;
+  // -moz-flex-direction:$direction;
+  // -ms-flex-direction:$direction;
+
+  // -webkit-box-orient: vertical;
+  // -webkit-box-direction: normal;
+  // -ms-flex-direction: column;
+    flex-direction:column;
+}
+
+@mixin flex-direction-column-reverse() {
+  // deprecated these 3 lines
+  // -webkit-flex-direction:$direction;
+  // -moz-flex-direction:$direction;
+  // -ms-flex-direction:$direction;
+
+  // -webkit-box-orient: vertical;
+  // -webkit-box-direction: reverse;
+  // -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+/*
+@mixin flex-direction($direction) {
+  -webkit-flex-direction:$direction;
+  -moz-flex-direction:$direction;
+  -ms-flex-direction:$direction;
+  flex-direction:$direction;
+}*/
+
+/// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include margin(null 10px 3em 20vh);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-bottom: 3em;
+///     margin-left: 20vh;
+///     margin-right: 10px;
+///   }
+///
+/// @require {mixin} directional-property
+///
+/// @output `margin`
+/*@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap:$wrap;
+  -moz-flex-wrap:$wrap;
+  -ms-flex-wrap:$wrap;
+  flex-wrap:$wrap;
+}*/
+
+@mixin flex-wrap-nowrap() {
+  // -webkit-flex-wrap: nowrap;
+  // -moz-flex-wrap: nowrap;
+  // -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+@mixin flex-wrap-wrap() {
+  // -webkit-flex-wrap: wrap;
+  // -moz-flex-wrap: wrap;
+  // -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin flex-wrap-wrap-reverse() {
+  // -webkit-flex-wrap: wrap-reverse;
+  // -moz-flex-wrap: wrap-reverse;
+  // -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+/// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include margin(null 10px 3em 20vh);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-bottom: 3em;
+///     margin-left: 20vh;
+///     margin-right: 10px;
+///   }
+///
+/// @require {mixin} directional-property
+///
+/// @output `margin`
+@mixin flex-justify-content-flex-start() {
+  // -webkit-justify-content: $justify;
+  // -moz-justify-content: $justify;
+  // -ms-justify-content: $justify;
+  justify-content: flex-start;
+}
+
+@mixin flex-justify-content-flex-end() {
+  // -webkit-justify-content: $justify;
+  // -moz-justify-content: $justify;
+  // -ms-justify-content: $justify;
+  justify-content: flex-end;
+}
+
+@mixin flex-justify-content-center() {
+  // -webkit-justify-content: $justify;
+  // -moz-justify-content: $justify;
+  // -ms-justify-content: $justify;
+  justify-content: center;
+}
+
+@mixin flex-justify-content-space-between() {
+  // -webkit-justify-content: $justify;
+  // -moz-justify-content: $justify;
+  // -ms-justify-content: $justify;
+  justify-content: space-between;
+}
+
+@mixin flex-justify-content-space-around() {
+  // -webkit-justify-content: $justify;
+  // -moz-justify-content: $justify;
+  // -ms-justify-content: $justify;
+  justify-content: space-around;
+}
+
+/*
+@mixin flex-justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+}*/
+
+/// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include margin(null 10px 3em 20vh);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-bottom: 3em;
+///     margin-left: 20vh;
+///     margin-right: 10px;
+///   }
+///
+/// @require {mixin} directional-property
+///
+/// @output `margin`
+@mixin flex-align-items-flex-start() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-items: $align;
+  align-items: flex-start;
+}
+
+@mixin flex-align-items-flex-end() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-items: $align;
+  align-items: flex-end;
+}
+
+@mixin flex-align-items-center() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-items: $align;
+  align-items: center;
+}
+
+@mixin flex-align-items-baseline() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-items: $align;
+  align-items: baseline;
+}
+
+@mixin flex-align-items-stretch() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-items: $align;
+  align-items: stretch;
+}
+
+/*
+@mixin flex-align-items($align) {
+  -webkit-flex-align: $align;
+  -moz-flex-align: $align;
+  -ms-flex-align: $align;
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+*/
+
+// =================================================
+// =================================================
+// =================================================
+
+@mixin flex-align-content-flex-start() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-items: $align;
+  align-content: flex-start;
+}
+
+@mixin flex-align-content-flex-end() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-content: $align;
+  align-content: flex-end;
+}
+
+@mixin flex-align-content-center() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-content: $align;
+  align-content: center;
+}
+
+@mixin flex-align-content-space-between() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-content: $align;
+  align-content: space-between;
+}
+
+@mixin flex-align-content-space-around() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-content: $align;
+  align-content: space-around;
+}
+
+@mixin flex-align-content-stretch() {
+  // -webkit-flex-align: $align;
+  // -moz-flex-align: $align;
+  // -ms-flex-align: $align;
+  // -webkit-align-content: $align;
+  align-content: stretch;
+}
+
+/// Provides a quick method for targeting `margin` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include margin(null 10px 3em 20vh);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-bottom: 3em;
+///     margin-left: 20vh;
+///     margin-right: 10px;
+///   }
+///
+/// @require {mixin} directional-property
+/// @url: http://haleyhaw.es/blog/useful-sass-mixins-flexbox
+/// @output `margin`
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+
+
+
+

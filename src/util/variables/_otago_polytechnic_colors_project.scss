@@ -1,0 +1,35 @@
+$op_background_color_body: $op-white;
+$op_textbox_grey_color: $op-grey;
+$op_green_button_color: color(green_series, op_lightgreen_hex_for_project_unofficial);
+$op_heading_text_color: color(blue_series, op_blue_hex);
+$op_text_colour: #444443;
+$op_scrollbar_area: #b6b1a8;
+$op_scrollbar: #807f7d;
+$op_remove_button_red: #dc4d4d;
+$op_button_click_color: #7d9d33;
+$op_dropdown_menu_color: #7d9d33;
+
+
+/*
+Background colour: f0f1f1
+Textbox grey: e3dfd7
+OP green (button colour): 9ec030
+OP blue (heading colour): 004898
+Text colour: 444443
+Scroll bar area: b6b1a8
+Scroll bar: 807f7d
+Remove button red: dc4d4d
+Button click colour change and drop down menu: 7d9d33
+*/
+
+// colors for forms specific
+$op_title_fields_contact_form_text_color_not_checked: #444443;
+$op_title_fields_contact_form_text_color_checked: $white;
+$op_title_fields_contact_form_background_color_checked: color(green_series, op_lightgreen_hex_for_project_unofficial);
+$op_title_fields_contact_form_background_color_not_checked: $op-grey;
+$op_input_control_background_color: $op-grey;
+$op-subtitle-span-text-color: color(blue_series, op_blue_hex);
+
+// not color settings
+$op_title_fields_contact_form_text_font_weight_checked: bold;
+$op_input_control_border: none;

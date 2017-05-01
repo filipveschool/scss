@@ -1,0 +1,130 @@
+//************************************************************************//
+// Background property for adding multiple backgrounds using shorthand
+// notation.
+//************************************************************************//
+
+@mixin background($backgrounds...) {
+  $webkit-backgrounds: ();
+  $spec-backgrounds: ();
+
+  @each $background in $backgrounds {
+    $webkit-background: ();
+    $spec-background: ();
+    $background-type: type-of($background);
+
+    @if $background-type == string or $background-type == list {
+      $background-str: if($background-type == list, nth($background, 1), $background);
+
+      $url-str: str-slice($background-str, 1, 3);
+      $gradient-type: str-slice($background-str, 1, 6);
+
+      @if $url-str == "url" {
+        $webkit-background: $background;
+        $spec-background: $background;
+      } @else if $gradient-type == "linear" {
+        $gradients: _linear-gradient-parser("#{$background}");
+        $webkit-background: map-get($gradients, webkit-image);
+        $spec-background: map-get($gradients, spec-image);
+      } @else if $gradient-type == "radial" {
+        $gradients: _radial-gradient-parser("#{$background}");
+        $webkit-background: map-get($gradients, webkit-image);
+        $spec-background: map-get($gradients, spec-image);
+      } @else {
+        $webkit-background: $background;
+        $spec-background: $background;
+      }
+    } @else {
+      $webkit-background: $background;
+      $spec-background: $background;
+    }
+
+    $webkit-backgrounds: append($webkit-backgrounds, $webkit-background, comma);
+    $spec-backgrounds: append($spec-backgrounds, $spec-background, comma);
+  }
+
+  background: $webkit-backgrounds;
+  background: $spec-backgrounds;
+}
+
+// Background Clipping Theme X Renews
+// =============================================================================
+
+@mixin background-clip($clip) {
+  -webkit-background-clip: $clip;
+  background-clip: $clip;
+}
+
+// Alpha Transparency
+// =============================================================================
+
+//
+// Add an alpha transparency value to any 'background-color' or 'border-color'.
+//
+
+@mixin translucent-background($color: $white, $alpha: 1) {
+  background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+}
+
+@mixin translucent-border($color: $white, $alpha: 1) {
+  border-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+  @include background-clip(padding-box);
+}
+
+// Gradients
+// =============================================================================
+
+//
+// Horizontal.
+//
+
+@mixin gradient-horizontal($startColor: #555555, $endColor: #333333) {
+  background-color: $endColor;
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+  background-image: linear-gradient(left, $startColor, $endColor);
+  background-repeat: repeat-x;
+}
+
+//
+// Vertical.
+//
+
+@mixin gradient-vertical($startColor: #555555, $endColor: #333333) {
+  background-color: mix($startColor, $endColor, 60%);
+  // background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+  // background-image: linear-gradient(top, $startColor, $endColor);
+  background-image: -webkit-linear-gradient(to bottom, $startColor, $endColor);
+  background-image: linear-gradient(to bottom, $startColor, $endColor);
+  background-repeat: repeat-x;
+}
+
+//
+// Vertical (3 colors).
+//
+
+@mixin gradient-vertical-three-colors($startColor: #00B3EE, $midColor: #7A43B6, $colorStop: 50%, $endColor: #C3325F) {
+  background-color: mix($midColor, $endColor, 80%);
+  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-repeat: no-repeat;
+}
+
+//
+// Directional.
+//
+
+@mixin gradient-directional($startColor: #555555, $endColor: #333333, $deg: 45deg) {
+  background-color: $endColor;
+  background-image: -webkit-linear-gradient($deg, $startColor, $endColor);
+  background-image: linear-gradient($deg, $startColor, $endColor);
+  background-repeat: repeat-x;
+}
+
+//
+// Striped.
+//
+
+@mixin gradient-striped($color, $angle: -45deg) {
+  background-color: $color;
+  background-image: -webkit-linear-gradient($angle, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+}

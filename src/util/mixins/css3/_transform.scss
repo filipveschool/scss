@@ -1,0 +1,106 @@
+@mixin transform($property: none) {
+  // none | <transform-function>
+  @include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+@mixin transform-origin($axes: 50%) {
+  // x-axis - left | center | right  | length | %
+  // y-axis - top  | center | bottom | length | %
+  // z-axis -                          length
+  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+}
+
+@mixin transform-style($style: flat) {
+  @include prefixer(transform-style, $style, webkit moz ms o spec);
+}
+
+
+
+// Transformations
+// =============================================================================
+
+//
+// Rotate.
+//
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+
+//
+// Rotate X.
+//
+
+@mixin rotate-x($degrees) {
+  -webkit-transform: rotateX($degrees);
+  -ms-transform: rotateX($degrees);
+  transform: rotateX($degrees);
+}
+
+
+//
+// Rotate Y.
+//
+
+@mixin rotate-y($degrees) {
+  -webkit-transform: rotateY($degrees);
+  -ms-transform: rotateY($degrees);
+  transform: rotateY($degrees);
+}
+
+
+//
+// Scale.
+//
+
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio);
+  transform: scale($ratio);
+}
+
+
+//
+// Translate.
+//
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+
+//
+// Translate 3D.
+//
+
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -ms-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+
+
+//
+// Skew.
+//
+
+@mixin skew($x, $y) {
+  -webkit-transform: skew($x, $y);
+  -ms-transform: skew($x, $y);
+  transform: skew($x, $y);
+}
+
+
+//
+// Transform style.
+//
+
+@mixin transform-style($style) {
+  -webkit-transform-style: $style;
+  transform-style: $style;
+}

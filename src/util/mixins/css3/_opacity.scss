@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------------
+// Opacity
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @group CSS3
+/// @ignore de GROUP annotation bepaalt de naam van de hoofdgroep.
+////
+
+/// 'Opacity description'
+///
+/// @access public
+///
+/// @author Filip Vanden Eynde
+///
+/// @ignore String is the type of variable in the line below.
+/// @ignore $wrap is the name of the variable in the line below.
+/// @ignore [break-word] is the default value of the variable in the line below.
+/// @ignore the line below that is the description of the variable value.
+///
+/// @param {String} $wrap [break-word]
+///   Value for the `word-break` property.
+///
+/// @ignore the line below is the group where all mixins or functions will be assembled together for organization. for example, mixins.
+///
+/// @ignore This line will not be documented by using the annotation @ignore
+///
+/// @ignore The first word after the EXAMPLE annotation is the language for the syntax highlighting.
+///
+/// @example scss - Usage
+///   .wrapper {
+///     @include opacity(0.8);
+///   }
+///
+/// @example css - CSS Output
+///   .wrapper {
+///     opacity: 0.8;
+///     filter: opacity: 0.8;
+///   }
+
+@mixin opacity($opacity: 0.5) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); // IE8
+}

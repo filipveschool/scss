@@ -1,0 +1,105 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@import "variables/_colors";
+@import "variables/_global-variables";
+@import "variables/_links-variables";
+@import "variables/_button-variables";
+@import "variables/_body-variables";
+@import "variables/_alert-variables";
+@import "variables/_box-model";
+@import "variables/_css3-transitions";
+@import "variables/_header-variables";
+@import "variables/_footer-variables";
+@import "variables/_navbar-variables";
+@import "variables/_colophon-variables";
+@import "variables/_dropdown-variables";
+@import "variables/_font-variables";
+@import "variables/_forms";
+@import "variables/_form-states-variables";
+@import "variables/_breakpoints-variables";
+@import "variables/_grid-variables";
+@import "variables/_headings-variables";
+@import "variables/_placeholder-variables";
+@import "variables/_plugin-variables";
+@import "variables/_popovers-variables";
+@import "variables/_shapes-variables";
+@import "variables/_site-variables";
+@import "variables/_spacing-helpers-variables";
+@import "variables/_table-variables";
+@import "variables/_tooltip-variables";
+@import "variables/_typography-variables";
+@import "variables/_widget-variables";
+@import "variables/_z-index-master-variables";
+@import "variables/_mejs-variables";
+@import "variables/_font-awesome-variables";
+@import "variables/_theme-variables";
+@import "variables/otago_polytechnic_colors_project";
+@import "variables/options_variables";
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+/*
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
+) !default;
+*/
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

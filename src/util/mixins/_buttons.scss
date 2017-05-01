@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/// Generates variables for all buttons. Please note that you must use interpolation on the variable: `#{$all-buttons}`.
+///
+/// @example scss - Usage
+///   #{$all-buttons} {
+///     background-color: #f00;
+///   }
+///
+///   #{$all-buttons-focus},
+///   #{$all-buttons-hover} {
+///     background-color: #0f0;
+///   }
+///
+///   #{$all-buttons-active} {
+///     background-color: #00f;
+///   }
+///
+/// @example css - CSS Output
+///   button,
+///   input[type="button"],
+///   input[type="reset"],
+///   input[type="submit"] {
+///     background-color: #f00;
+///   }
+///
+///   button:focus,
+///   input[type="button"]:focus,
+///   input[type="reset"]:focus,
+///   input[type="submit"]:focus,
+///   button:hover,
+///   input[type="button"]:hover,
+///   input[type="reset"]:hover,
+///   input[type="submit"]:hover {
+///     background-color: #0f0;
+///   }
+///
+///   button:active,
+///   input[type="button"]:active,
+///   input[type="reset"]:active,
+///   input[type="submit"]:active {
+///     background-color: #00f;
+///   }
+///
+/// @require assign-inputs
+///
+/// @type List
+///
+/// @todo Remove double assigned variables (Lines 59–62) in v5.0.0
+
+$buttons-list: 'button',
+'input[type="button"]',
+'input[type="reset"]',
+'input[type="submit"]';
+
+$all-buttons: assign-inputs($buttons-list);
+$all-buttons-active: assign-inputs($buttons-list, active);
+$all-buttons-focus: assign-inputs($buttons-list, focus);
+$all-buttons-hover: assign-inputs($buttons-list, hover);
+
+$all-button-inputs: $all-buttons;
+$all-button-inputs-active: $all-buttons-active;
+$all-button-inputs-focus: $all-buttons-focus;
+$all-button-inputs-hover: $all-buttons-hover;
+
+// Button Backgrounds
+// =============================================================================
+
+//
+// 1. gradient-bar will set the background to a pleasing blend of these to
+//    support IE <= 9.
+// 2. In these cases the gradient won't cover the background, so we override.
+// 3. IE 8 can't handle 'box-shadow' to show active, so we darken a bit
+//    oursleves.
+//
+
+@mixin button-background($startColor, $endColor) {
+  @include gradient-bar($startColor, $endColor); // 1
+  @include reset-filter();
+
+  &:hover, &:active, &[disabled] {
+    background-color: $endColor; // 2
+  }
+
+  &:active {
+    background-color: darken($endColor, 10%) \9
+  ; // 3
+  }
+}
+
+// Gradient Bar (Buttons and Alerts)
+// =============================================================================
+
+@mixin gradient-bar($primaryColor, $secondaryColor) {
+  @include gradient-vertical($primaryColor, $secondaryColor);
+  border-color: $secondaryColor darken($secondaryColor, 6.5%) darken($secondaryColor, 9%);
+  border-color: rgba(0, 0, 0, 0.1) darken(rgba(0, 0, 0, 0.1), 6.5%) fadein(rgba(0, 0, 0, 0.1), 9%);
+}
+
+// Depth Button Shadow
+// =============================================================================
+
+@mixin depth-button-shadow($color) {
+  @include box-shadow(#{inset 0 1px 0 rgba(255, 255, 255, 0.5), -1px 0px 1px darken($color, 6%), 0px 1px 1px darken($color, 6.25%), -2px 1px 1px darken($color, 6.5%), -1px 2px 1px darken($color, 6.75%), -3px 2px 1px darken($color, 7%), -2px 3px 1px darken($color, 7.25%), -4px 3px 1px darken($color, 7.5%), -3px 4px 1px darken($color, 7.75%), -5px 4px 1px darken($color, 8%), -4px 5px 1px darken($color, 8.25%), -6px 5px 1px darken($color, 8.5%), -6px 7px 0 rgba(0, 0, 0, 0.05), -5px 8px 0 rgba(0, 0, 0, 0.05), -3px 9px 0 rgba(0, 0, 0, 0.04), -2px 10px 0 rgba(0, 0, 0, 0.04), -1px 11px 0 rgba(0, 0, 0, 0.03), 0px 12px 0 rgba(0, 0, 0, 0.03), 1px 13px 0 rgba(0, 0, 0, 0.02), 2px 14px 0 rgba(0, 0, 0, 0.02), 3px 15px 0 rgba(0, 0, 0, 0.01), 4px 16px 0 rgba(0, 0, 0, 0.01), 5px 17px 0 rgba(0, 0, 0, 0.01), 6px 18px 0 rgba(0, 0, 0, 0.01)});
+}
+
+// Flat Button Styles
+// =============================================================================
+
+@mixin flat-button-colors($primaryColor, $secondaryColor) {
+  border-color: mix($primaryColor, $secondaryColor);
+  background-color: mix($primaryColor, $secondaryColor);
+
+  &:hover {
+    background-color: darken($primaryColor, 10%);
+  }
+
+  &:active {
+    background-color: darken($primaryColor, 15%);
+  }
+}

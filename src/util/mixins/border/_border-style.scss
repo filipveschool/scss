@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/// Provides a quick method for targeting `border-style` on specific sides of a box. Use a `null` value to “skip” a side.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include border-style(dashed null solid);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     border-bottom-style: solid;
+///     border-top-style: dashed;
+///   }
+///
+/// @require {mixin} directional-property
+///
+/// @output `border-style`
+
+@mixin border-style($vals...) {
+  @include directional-property(border, style, $vals...);
+}
+
+/// Border mixin
+/// Add a border to any element
+///
+/// @access public
+///
+/// @author Filip Vanden Eynde
+///
+/// @ignore String is the type of variable in the line below.
+/// @ignore $wrap is the name of the variable in the line below.
+/// @ignore [break-word] is the default value of the variable in the line below.
+/// @ignore the line below that is the description of the variable value.
+///
+/// @param {int} $width [break-word]
+///   Value for the `width` property.
+/// @param {int} $style
+///
+/// @ignore the line below is the group where all mixins or functions will be assembled together for organization. for example, mixins.
+///
+///
+/// @ignore This line will not be documented by using the annotation @ignore
+///
+/// @ignore The first word after the EXAMPLE annotation is the language for the syntax highlighting.
+///
+/// @example scss - Usage
+///   .box {
+///     @include border(1px solid, $white, null);
+///   }
+///
+/// @example css - CSS Output
+///   .box {
+///     border: 1px solid #ffffff;
+///
+/// @example scss - Usage
+///   .box {
+///     @include border(2px dashed, $black, 'left');
+///   }
+///
+/// @example css - CSS Output
+///   .box {
+///     border-left: 2px dashed #000000;
+///   }///   }
+
+
+
+@mixin border($width, $style, $color, $side: all) {
+  @if ($side == all) {
+    border: $width $style $color;
+  } @else if ($side == 'top') {
+    border-top: $width $style $color;
+  } @else if ($side == 'right') {
+    border-right: $width $style $color;
+  } @else if ($side == 'bottom') {
+    border-bottom: $width $style $color;
+  } @else if ($side == 'left') {
+    border-left: $width $style $color;
+  }
+}

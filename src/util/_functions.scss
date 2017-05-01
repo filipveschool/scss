@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+// Global Functions
+@import "functions/_color-function";
+@import "functions/_assign-inputs";
+@import "functions/_contains";
+@import "functions/_contains-falsy";
+@import "functions/_convert-number-to-word";
+@import "functions/_is-length";
+@import "functions/_is-light";
+@import "functions/_is-number";
+@import "functions/_is-size";
+@import "functions/_px-to-em";
+@import "functions/_px-to-rem";
+@import "functions/_shade";
+@import "functions/_strip-units";
+@import "functions/_tint";
+@import "functions/_transition-property-name";
+@import "functions/_unpack";
+@import "functions/_modular-scale";
+@import "functions/_reverse-list";
+@import "functions/_z-index-calculation";
+
+
+/// Native `url(..)` function wrapper
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+    @return url($base + $type + $path);
+}
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function image($path, $base: $base-url) {
+    @return asset($base, 'images/', $path);
+}
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function font($path, $base: $base-url) {
+    @return asset($base, 'fonts/', $path);
+}

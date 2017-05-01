@@ -1,0 +1,376 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the contact page.
+// -----------------------------------------------------------------------------
+
+// programme options label
+
+.programme_options,
+.chosen-study-option,
+.study_options{
+  float: left;
+  @include margin(null 10px null null);
+}
+
+.subtitle {
+  color: $op-subtitle-span-text-color;
+}
+
+.contactform {
+
+  @include margin(null 20px null 20px);
+
+  // @include susy-clearfix;
+  @include clearfix;
+
+  //Dit neemt een breedte van 8 kolommen op 12 kolommen als aantal
+  // en begint te tellen op kolom 2.
+  max-width: span(8 at 2);
+  // dit is voor te centreren.
+  margin: 0 auto;
+
+  & h1 {
+    text-align: center;
+  }
+
+  // ipad 768 height op 1024 width
+  // @include mappy-bp(max-width tablet-wide) {
+  @include mappy-bp(max-width tablet_wide) {
+    max-width: span(full);
+    // padding-left: 20px;
+
+  }
+
+  // ipad 1024 height op 768 width
+  @include mappy-bp(max-width tablet) {
+    max-width: span(full);
+  }
+
+  .study_areas_grid {
+    float: left;
+    padding: 2px 0 20px;
+    width: 100%;
+  }
+
+}
+
+.contactform {
+
+  .column_1 {
+    content: 'Column 1';
+    // max-width: span(4 at 2);
+    // max-width: span(4);
+    @include span(5);
+  }
+
+  .column_2 {
+    content: 'Column 1';
+    // max-width: span(4 at 7);
+    // max-width: span(4);
+
+    @include span(5);
+  }
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.form-check {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5rem;
+
+  &.disabled {
+    .form-check-label {
+      color: #636c72;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.form-check-label {
+  padding-left: 1.25rem;
+  margin-bottom: 0; // Override default `<label>` bottom margin
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.25rem;
+  margin-left: -1.25rem;
+
+  &:only-child {
+    position: static;
+  }
+}
+
+// Radios and checkboxes on same line
+.form-check-inline {
+  display: inline-block;
+
+  .form-check-label {
+    vertical-align: middle;
+  }
+
+  + .form-check-inline {
+    margin-left: 0.75rem;
+  }
+}
+
+// ---------------------
+// ---------------------
+// ---------------------
+
+//keyframe and animation mixins
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+/* ========= */
+
+.radiofilip {
+
+  @include clearfix;
+
+  & input[type="radio"] {
+    display: none;
+    // margin: 10px;
+
+    + label {
+      // width: span(3);
+    }
+
+    + .radio_control_label {
+      background-color: $op_title_fields_contact_form_background_color_not_checked;
+      color: $op_title_fields_contact_form_text_color_not_checked;
+    }
+
+    &:checked + .radio_control_label {
+      background-color: $op_title_fields_contact_form_background_color_checked;
+      color: $op_title_fields_contact_form_text_color_checked;
+      @include transition(all 0.3s ease-in-out);
+      font-weight: $op_title_fields_contact_form_text_font_weight_checked;
+
+      & .text {
+        // font-size: 18px;
+      }
+    }
+
+    /*
+    + label {
+      display: inline-block;
+      margin: -2px;
+      padding: 4px 12px;
+      background-color: #e7e7e7;
+      border-color: #ddd;
+    }
+
+    &:checked + label {
+      background-color: $op_green_button_color;
+    }
+    */
+
+  }
+
+}
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.three {
+  // width: 23.8%;
+  @include span(2);
+}
+
+.radio_control_label {
+  display: block;
+  // padding: 30px 0;
+  // padding-top: 30px;
+  padding-right: 0;
+  // padding-bottom: 30px;
+  padding-left: 0;
+  // border: 2px solid #34495e;
+  color: #34495e;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.text, .icon {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.dob {
+  @include clearfix;
+
+  img {
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+}
+
+input[type="date"] {
+  // width: span(6);
+  @include span(6);
+}
+
+.contact_info {
+  @include clearfix;
+}
+
+.phonenumberform {
+  @include span(6);
+}
+
+.emailaddressform {
+  @include span(6 last);
+}
+
+
+.calendarsvg {
+  width: 40px;
+  margin-top: -10px;
+  margin-left: 10px
+}
+
+/* ========= */
+
+.checkboxes {
+
+  label:not(.title) {
+    display: inline-block;
+    user-select: none;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    // @include border-radius(2px);
+    @include transition-duration(0.25s);
+    cursor: pointer;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem;
+    &:after {
+      content: '';
+      display: block;
+      margin-left: 9px;
+      margin-top: 2px;
+      width: 9px;
+      height: 18px;
+      border: solid rgba(0, 0, 0, 0.1);
+      border-width: 0 6px 6px 0;
+      @include transform(rotate(45deg));
+    }
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      color: black;
+    }
+    &:active {
+      @include transition-duration(0);
+      -webkit-filter: brightness(0.8);
+    }
+  }
+
+  input {
+    display: none;
+    &:checked + {
+      label {
+        color: #269b0a;
+      }
+      .green-background {
+        border-color: #269b0a;
+        background: #269b0a;
+        &:after {
+          content: '';
+          display: block;
+          margin-left: 9px;
+          margin-top: 2px;
+          width: 9px;
+          height: 18px;
+          border: solid rgba(255, 255, 255, 1);
+          border-width: 0 6px 6px 0;
+          @include transform(rotate(45deg));
+        }
+      }
+      label {
+        @include animation(boom 0.5s ease);
+      }
+    }
+  }
+}
+
+@include keyframes(boom) {
+  25% {
+    @include transform(scale(1.25));
+  }
+}
+
+/* ========= */
+
+.radios {
+  input[type="radio"] {
+    @include appearance(none);
+    margin: 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    @include box-shadow(inset 0 0 0 8px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.3));
+    border-radius: 50%;
+    @include transition-duration(0.25s);
+    cursor: pointer;
+
+    &:hover,
+    &:checked {
+      background: rgba(0, 0, 0, 0.5);
+      @include box-shadow(inset 0 0 0 6px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 0, 0, 0.5));
+    }
+
+    &:checked {
+      background: #269b0a;
+      @include box-shadow(inset 0 0 0 6px rgba(255, 255, 255, 1), 0 0 0 2px #269b0a);
+
+    }
+  }
+}
+
+

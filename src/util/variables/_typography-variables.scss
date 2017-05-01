@@ -1,0 +1,35 @@
+// Typography
+// =============================================================================
+
+@import "../_font-stacks";
+
+//
+// Font families.
+//
+
+$sansFontFamily:     $lato     !default;
+$monoFontFamily:     $consolas !default;
+$altFontFamily:      $lato     !default;
+
+
+//
+// Base styles.
+//
+
+$base-font-size-px: 16 !default;
+
+$baseFontSize:      62.5%           !default;
+$baseLineHeight:    1.8             !default;
+$baseFontWeight:    300             !default;
+$baseFontFamily:    $sansFontFamily !default;
+$baseMargin:        1.5em           !default;
+
+
+//
+// Heading styles.
+//
+
+$headingsFontFamily:    $altFontFamily !default;
+$headingsFontWeight:    700            !default;
+$headingsColor: $accent-color !default;
+

@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------
+// Responsive ratio
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @ignore @group margin
+////
+
+/// We use this for creating scalable elements (usually images / background images) that maintain a ratio.
+///
+/// @example scss - Basic Usage Sass
+///    .center-my-block-thingie {
+///        @include margin-auto();
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    div {
+///        @include responsive-ratio(16,9);
+///    }
+///
+/// @url http://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote(( $y / $x ) * 100 + '%');
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+// TODO voorbeelden geven

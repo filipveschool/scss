@@ -1,0 +1,268 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.study_areas_overview {
+
+  // @include susy-clearfix;
+  @include clearfix;
+
+
+  //Dit neemt een breedte van 8 kolommen op 12 kolommen als aantal
+  // en begint te tellen op kolom 2.
+  max-width: span(8 at 2);
+  // dit is voor te centreren.
+  margin: 0 auto;
+
+  & h1 {
+    text-align: center;
+  }
+
+  // ipad 768 height op 1024 width
+  // @include mappy-bp(max-width tablet-wide) {
+  @include mappy-bp(max-width tablet_wide) {
+    max-width: span(full);
+    // padding-left: 20px;
+
+  }
+
+  // ipad 1024 height op 768 width
+  @include mappy-bp(max-width tablet) {
+    max-width: span(full);
+  }
+
+  .study_areas_grid {
+    float: left;
+    padding: 2px 0 20px;
+    width: 100%;
+  }
+
+}
+
+.study_areas_grid{
+
+  /*ul {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+  }*/
+
+}
+
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+//https://www.sitepoint.com/responsive-solutions-for-feature-comparison-tables/
+
+// Specific section style for compare-courses
+.compare-courses {
+  //TODO background-color op het einde verwijderen
+  background-color: color(warm_grey_series, op_grey_hex);
+  padding-bottom: 30px;
+
+  @include span(full);
+
+  & .container {
+    @include padding(null 15px null 15px);
+    //@include margin-auto;
+    @include push--auto;
+
+    & .row {
+      @include margin(10px null 10px null);
+      @include span(full);
+    }
+
+    table {
+      //@include margin(10px null 10px null);
+
+      // Start in kolom 3 en 6 koloms als breedte
+      //@include span(6 at 3);
+      @include span(full);
+      background: white;
+      border-radius: 3px;
+      border-collapse: collapse;
+      height: 320px;
+      //margin: auto;
+      //max-width: 600px;
+      padding: 5px;
+      width: 100%;
+      @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+      animation: float 5s infinite;
+
+      & th {
+        color: #d5dde5;
+        background: #1b1e24;
+        border-bottom: 4px solid #9ea7af;
+        border-right: 1px solid #343a45;
+        font-size: 23px;
+        font-weight: 100;
+        padding: 24px;
+        text-align: left;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        vertical-align: middle;
+
+        & .text-left {
+          text-align: left;
+        }
+
+        &:first-child {
+          border-top-left-radius: 3px;
+        }
+        &:last-child {
+          border-top-right-radius: 3px;
+          border-right: none;
+        }
+      }
+
+      h3 {
+        color: #fafafa;
+        font-size: 30px;
+        font-weight: 400;
+        font-style: normal;
+        //font-family: Roboto, helvetica, arial, sans-serif;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+      }
+    }
+
+    th {
+      color: #D5DDE5;
+      background: #1b1e24;
+      border-bottom: 4px solid #9ea7af;
+      border-right: 1px solid #343a45;
+      font-size: 23px;
+      font-weight: 100;
+      padding: 24px;
+      text-align: left;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      vertical-align: middle;
+
+      &:first-child {
+        border-top-left-radius: 3px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 3px;
+        border-right: none;
+      }
+    }
+
+    tr {
+      border-top: 1px solid #C1C3D1;
+      border-bottom-: 1px solid #C1C3D1;
+      color: #666B85;
+      font-size: 16px;
+      font-weight: normal;
+      text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+
+      &:hover td {
+        background: #4E5066;
+        color: #FFFFFF;
+        border-top: 1px solid #22262e;
+        border-bottom: 1px solid #22262e;
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(odd) {
+        td {
+          background: #EBEBEB;
+        }
+
+        &:hover td {
+          background: #4E5066;
+        }
+      }
+
+      &:last-child td {
+        &:first-child {
+          border-bottom-left-radius: 3px;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 3px;
+        }
+      }
+    }
+
+    td {
+      background: #FFFFFF;
+      padding: 20px;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 300;
+      font-size: 18px;
+      text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid #C1C3D1;
+
+      &:last-child {
+        border-right: 0px;
+      }
+    }
+
+    th, td {
+      &.text-left {
+        text-align: left;
+      }
+
+      &.text-center {
+        text-align: center;
+      }
+
+      &.text-right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.visible-xs {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .visible-xs {
+    display: table-row;
+  }
+
+  td:first-child,
+  th:first-child {
+    display: none;
+  }
+}
+
+.titel-compare-courses {
+  text-align: center;
+
+  h1 {
+  }
+
+}

@@ -1,0 +1,170 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Global css3 mixins
+@import "mixins/css3/_animation";
+@import "mixins/css3/_appearance";
+@import "mixins/css3/_backface-visibility";
+@import "mixins/css3/_background";
+@import "mixins/css3/_background-image";
+@import "mixins/css3/_border-image";
+@import "mixins/css3/_box";
+@import "mixins/css3/_calc";
+@import "mixins/css3/_columns";
+@import "mixins/css3/_filter";
+@import "mixins/css3/_flex-box";
+@import "mixins/css3/flex_mixins";
+@import "mixins/css3/_font-face";
+@import "mixins/css3/_font-feature-settings";
+@import "mixins/css3/_hidpi-media-query";
+@import "mixins/css3/_hyphens";
+@import "mixins/css3/_image-rendering";
+@import "mixins/css3/_keyframes";
+@import "mixins/css3/_linear-gradient";
+@import "mixins/css3/_opacity";
+@import "mixins/css3/_others";
+@import "mixins/css3/_perspective";
+@import "mixins/css3/_placeholder";
+@import "mixins/css3/_radial-gradient";
+@import "mixins/css3/_selection";
+@import "mixins/css3/_text-decoration";
+@import "mixins/css3/_transform";
+@import "mixins/css3/_transition";
+@import "mixins/css3/_user-select";
+// Global other mixins
+@import "mixins/_alignment";
+@import "mixins/_angled-edges";
+@import "mixins/border/_border-color";
+@import "mixins/border/_border-radius";
+@import "mixins/border/_border-style";
+@import "mixins/border/_border-width";
+@import "mixins/_buttons";
+@import "mixins/_centering";
+@import "mixins/_clearfix";
+@import "mixins/_ellipsis";
+@import "mixins/_font-stacks";
+@import "mixins/_forms";
+@import "mixins/_grid";
+@import "mixins/_hide-text";
+@import "mixins/_hyphens";
+@import "mixins/_images";
+@import "mixins/_list-reset";
+@import "mixins/_margin";
+@import "mixins/_margin-padding-reset";
+@import "mixins/_media-queries";
+@import "mixins/_navbar-mixins";
+@import "mixins/_padding";
+@import "mixins/_position";
+@import "mixins/_prefixer";
+@import "mixins/_retina-image";
+@import "mixins/_shadows";
+@import "mixins/_size";
+@import "mixins/_text-inputs";
+@import "mixins/_timing-functions";
+@import "mixins/_triangle";
+@import "mixins/_utilities";
+@import "mixins/_vertical-align";
+@import "mixins/_word-break";
+@import "mixins/_word-wrap";
+@import "mixins/_z-index";
+@import "mixins/_pseudo";
+@import "mixins/_placeholders";
+@import "mixins/_hardware";
+@import "mixins/_rounded-corners";
+@import "mixins/_background-cover";
+@import "mixins/_coverer";
+// Global typography mixins
+@import "mixins/typography/_font-legibility";
+@import "mixins/typography/_font-smoothing";
+@import "mixins/typography/_font-mixins";
+
+// bootstrap 4 mixins
+@import "mixins/grid/bootstrap_breakpoints_mixins";
+@import "mixins/grid/grid-framework";
+@import "mixins/grid/grid";
+
+
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+///
+/// @example scss - basic usage
+/// a {
+///     background: $link_background_color;
+///     color: $linkColor;
+///     text-decoration: none;
+///         @include on-event {
+///            color: $linkColorHover;
+///            text-decoration: underline;
+///           }
+///   }
+///
+/// @example scss - basic output
+/// a {
+///    background: transparent;
+///    color: #16a085;
+///    text-decoration: none;
+///   }
+///  a:hover,
+///  a:active,
+///  a:focus {
+///    color: #1abc9c;
+///    text-decoration: underline;
+/// }
+///
+/// @example scss - basic usage
+/// .links {
+///         background: $link_background_color;
+///         color: $linkColor;
+///         text-decoration: none;
+///             @include on-event(true) {
+///                 color: $linkColorHover;
+///                 text-decoration: underline;
+///             }
+///     }
+///
+/// @example scss - basic output
+/// .links {
+///         background: transparent;
+///         color: #16a085;
+///         text-decoration: none;
+///     }
+///
+/// .links,
+/// .links:hover,
+/// .links:active,
+/// .links:focus {
+///    color: #1abc9c;
+///    text-decoration: underline;
+/// }
+///
+
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+    #{$context} & {
+        @content;
+    }
+}
+

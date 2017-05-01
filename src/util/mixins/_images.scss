@@ -1,0 +1,24 @@
+// Image Replacement (Hide Text)
+// =============================================================================
+
+@mixin hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+
+// Thumbnail Style Renew Theme X
+// =============================================================================
+
+@mixin img_thumbnail() {
+  & {
+    padding: 4px;
+    line-height: $baseLineHeight;
+    border: 2px solid $shortcode-border-color;
+    background-color: $white;
+    @include transition(#{border 0.3s ease, box-shadow 0.3s ease});
+  }
+}

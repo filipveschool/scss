@@ -1,0 +1,35 @@
+
+// Resize Anything Theme X
+// =============================================================================
+
+//
+// 1. Options: 'horizontal', 'vertical', or 'both'.
+// 2. Safari fix.
+//
+
+@mixin resizable($direction) {
+  resize: $direction; // 1
+  overflow: auto; // 2
+}
+
+
+
+// Content Columns Theme X
+// =============================================================================
+
+@mixin content-columns($columnCount: 2, $columnGap: 3em, $columnRule: 1px solid #e5e5e5) {
+  -webkit-column-count: $columnCount;
+  -moz-column-count: $columnCount;
+  column-count: $columnCount;
+  -webkit-column-gap: $columnGap;
+  -moz-column-gap: $columnGap;
+  column-gap: $columnGap;
+  -webkit-column-rule: $columnRule;
+  -moz-column-rule: $columnRule;
+  column-rule: $columnRule;
+}
+
+
+
+
+
