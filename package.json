@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "npmupdatepackage": "npm version patch && npm publish",
     "sassdoc": "./node_modules/.bin/sassdoc src/ --dest ./sassdoc --config=.sassdocrc && echo 'Documentation successfully generated in sassdoc/index.html'",
-    "sasstodocs": "./node_modules/.bin/sassdoc src/ --dest ./docs --config=.sassdocrc && echo 'Documentation successfully generated in docs/index.html'",
+    "sasstodocs": "./node_modules/.bin/sassdoc src/ --dest ./docs --config=.sassdocrc && echo 'Documentation successfully generated in docs/index.html'"
   },
   "repository": {
     "type": "git",
