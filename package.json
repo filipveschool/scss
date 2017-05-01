@@ -4,7 +4,10 @@
   "description": "SCSS boilerplate with common functions, mixins, helpers, patterns, variables and external libraries",
   "main": "settings.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "npmupdatepackage": "npm version patch && npm publish",
+    "sassdoc": "./node_modules/.bin/sassdoc src/ --dest ./sassdoc --config=.sassdocrc && echo 'Documentation successfully generated in sassdoc/index.html'",
+    "sasstodocs": "./node_modules/.bin/sassdoc src/ --dest ./docs --config=.sassdocrc && echo 'Documentation successfully generated in docs/index.html'",
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,19 @@
   "bugs": {
     "url": "https://github.com/filipveschool/scss/issues"
   },
-  "homepage": "https://github.com/filipveschool/scss#readme"
+  "homepage": "https://github.com/filipveschool/scss#readme",
+  "dependencies": {
+    "bemify": "^0.1.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "brand-colors": "^1.2.1",
+    "breakpoint-sass": "^2.7.1",
+    "font-awesome": "^4.7.0",
+    "mappy-breakpoints": "^0.2.3",
+    "modularscale-sass": "^2.1.1",
+    "normalize-scss": "^6.0.0",
+    "normalize.css": "^5.0.0",
+    "sassdoc": "^2.2.0",
+    "susy": "^2.2.12",
+    "typi": "^3.0.0"
+  }
 }
