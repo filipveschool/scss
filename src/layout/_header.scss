@@ -1,0 +1,171 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//--------------------------------------------------------------
+// Header
+//--------------------------------------------------------------
+
+// Gekopieerd van deze site
+//https://github.com/engageinteractive/core/blob/master/src/scss/layout/_site-header.scss
+.site-header {
+  position: relative;
+  z-index: z('site-header');
+}
+
+// Site Title
+.site-title {
+  font-size: rem(48);
+}
+
+// .site-title
+
+// Site Description
+.site-description {
+  font-size: rem(24);
+  margin: 0 0 rem(24) 0;
+}
+
+// ------------------------
+// ------------------------
+// ------------------------
+
+/*
+header {
+  @include span(full);
+
+  z-index: z('headerv1');
+}
+*/
+
+$basic: 543px;
+$pair: 456px 794px;
+
+.navbar_wrapper.inner{
+  @include breakpoint($basic){
+    content: 'Basic Media Query';
+
+  }
+
+  @include breakpoint($pair){
+    content: 'Paired Media Query';
+  }
+}
+
+.navbar_wrapper .inner{
+
+}
+
+.navbar_wrapper {
+
+  // Dit zorgt voor een volledige width van 100%;
+  @include span(full);
+  margin: 0 auto 30px auto;
+
+  & .inner {
+    //Dit neemt een breedte van 8 kolommen op 12 kolommen als aantal en begint te tellen op kolom 2.
+    max-width: span(8 at 2);
+    // min-height: 100px;
+    height: 100px;
+    // dit is voor te centreren.
+    margin: 0 auto;
+
+    // TODO content verwijderen
+    @include mappy-bp(max-width tablet_wide) {
+      content: 'ipad 768 height op 1024 width';
+      max-width: span(full);
+      padding-left: 20px;
+    }
+
+    // TODO content verwijderen
+    @include mappy-bp(max-width tablet) {
+      content: 'ipad 1024 height op 768 width';
+      max-width: span(full);
+      padding-left: 20px;
+    }
+
+  }
+
+  & .icons_section {
+    @include span(8);
+  }
+
+  & .logo_section {
+    // height: 80px;
+    height: 200px;
+
+    // This is for making sure that it gets right aligned against the border.
+    text-align: right;
+
+    @include span(3 last);
+    // z-index: z('logo');
+
+    & > img {
+      height: 100%;
+      // padding: 15px;
+      width: auto;
+
+      // Part 1: Set a maximum relative to the parent
+      // max-width: 100%;
+      // Part 2: Override the height to auto, otherwise images will be stretched
+      // when setting a width and height attribute on the img element.
+      // height: auto;
+    }
+
+  }
+
+  .navbar_link {
+    padding-right: 20px;
+  }
+
+  .home_icon {
+
+  }
+
+  .contact_icon {
+
+  }
+
+}
+
+.appwrapper .background_banner_header {
+  // background: url("/images/Kotahitaka.png") repeat-x scroll -18px 53px white;
+  // background: url("/Kotahitaka.png") repeat-x scroll -18px 53px white;
+  // font-size: 14px;
+
+  // margin: 0 auto;
+
+  // max-width: 1150px;
+
+}
+
+// Resolution media queries are a pain. Breakpoint makes them easy. We use the standard DPPX units.
+$hidpi: min-resolution 1.5dppx;
+$cross-reso: max-resolution 144dpi;
+
+.appwrapper .background_banner_header {
+  @include breakpoint($hidpi) {
+    content: 'Device Pixel Ratio of at least 1.5';
+    // background: url("/Kotahitaka.png") repeat-x scroll -18px 53px white;
+    background-size: 218px 72px;
+  }
+
+  @include breakpoint($cross-reso) {
+    content: 'Cross Browser Resolution Query';
+    // background: url(/Kotahitaka.png) repeat-x scroll -18px 53px white;
+    background-size: 218px 72px;
+  }
+}
+
+// @include img-retina('../../app/images/Kotahitaka.png', '../../app/images/Kotahitaka.png',10610,267);
+
+/*@media not all, not all, (-webkit-min-device-pixel-ratio: 1.5), not all, (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .header {
+    background: url(/themes/op/images/218x72-kotahitaka@2x.png) repeat-x scroll -18px 53px white;
+    background-size: 218px 72px;
+  }
+}*/
+
+// .site-description
+
+// @import "header/_header-1";

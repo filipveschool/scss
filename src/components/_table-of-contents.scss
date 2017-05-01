@@ -1,0 +1,97 @@
+// Table of Contents Theme X Renew
+// =============================================================================
+
+//
+// Container.
+//
+
+.x-toc {
+    width: 210px;
+    margin: 0.55em 0;
+    border: 2px solid $shortcode-border-color;
+    padding: 15px;
+
+    &.left { margin-right: 1.75em; }
+    &.right { margin-left: 1.75em; }
+
+    &.left,
+    &.right {
+        @include break(baby-bear) {
+            width: auto;
+            float: none;
+            margin: 0 0 $baseMargin;
+        }
+    }
+
+    &.block {
+        width: auto;
+        margin: $baseMargin 0;
+    }
+
+    ul {
+        margin-bottom: -10px !important;
+    }
+}
+
+.h-toc {
+    margin: 0 0 10px;
+    @include font-size(1.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+//
+// Item.
+//
+
+.x-toc.block {
+    &.two-columns {
+        .x-toc-item {
+            float: left;
+            width: 48%;
+            margin-right: 4%;
+
+            &:nth-child(2n) { margin-right: 0; }
+        }
+    }
+
+    &.three-columns {
+        .x-toc-item {
+            float: left;
+            width: 30.66667%;
+            margin-right: 4%;
+
+            &:nth-child(3n) { margin-right: 0; }
+        }
+    }
+
+    @include break(cubs) {
+        &.three-columns .x-toc-item {
+            width: 48%;
+
+            &:nth-child(3n) { margin-right: 4%; }
+            &:nth-child(2n) { margin-right: 0; }
+        }
+    }
+
+    @include break(baby-bear) {
+        &.two-columns .x-toc-item,
+        &.three-columns .x-toc-item {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+.x-toc-item {
+    margin-bottom: 10px;
+    @include font-size(1.4);
+    line-height: 1.3;
+
+    a {
+        display: block;
+        border-bottom: 1px solid $shortcode-border-color;
+        @include text-overflow();
+    }
+}
+

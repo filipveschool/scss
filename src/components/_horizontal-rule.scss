@@ -1,0 +1,17 @@
+// Horizontal Rule THEME X RENEW
+// =============================================================================
+
+//TODO background-color in orde brengen
+hr,
+.hr {
+    height: $hr-height;
+    //background-color: $c--black;
+    border: none;
+}
+
+//TODO background-color in orde brengen
+.hr {
+    &--grey-light {
+        //background-color: $c--grey-light;
+    }
+}

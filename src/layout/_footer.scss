@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+  //full betekent volledige breedte ingesteld dus 100%
+  @include span(full);
+
+  @if ($footer_background == true) {
+    background-color: $footer_background_color;
+  }
+
+  @if ($footer_padding_status == true) {
+    @include padding($footer_padding_top $footer_padding_right $footer_padding_bottom $footer_padding_left);
+  }
+
+  @if ($footer_text_align_status == true) {
+    text-align: $footer_text_align;
+  }
+
+  color: $footer_text_color;
+
+  & .container {
+    @include padding(null 15px null 15px);
+
+    //@include show-grid(background);
+
+
+    & .column-1{
+      @include span(5 at 1);
+      //@include span(5 of 12);
+      //@include span(3);
+    }
+    & .column-2{
+      //@include span(5 of 12 last);
+      @include span(5 at 6 last);
+    }
+
+  }
+}
+
+
+
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+
+// Gekopieerd van deze site
+//https://github.com/engageinteractive/core/blob/master/src/scss/layout/_site-footer.scss
+/*
+.site-footer {
+    position: relative;
+    z-index: z("site-footer");
+}
+*/
+
+//@import "footer/_footer-1";

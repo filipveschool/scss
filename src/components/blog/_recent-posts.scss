@@ -1,0 +1,225 @@
+// Recent Posts Theme X RENEW
+// =============================================================================
+
+.x-recent-posts {
+    margin: 0 0 $baseMargin;
+
+    + .x-recent-posts {
+        margin-top: 4%;
+    }
+
+    a {
+        overflow: hidden;
+        float: left;
+        display: block;
+        margin: 0 4% 0 0;
+        border: 2px solid $shortcode-border-color;
+        padding: 5px 5px 0;
+        color: #999999;
+        background-color: $base-mod-background;
+        @include translate3d(0, 0, 0);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            .no-post-thumbnail {
+                .x-recent-posts-img {
+                    &:before { opacity: 1; }
+                    &:after { opacity: 1; }
+                }
+            }
+
+            .has-post-thumbnail {
+                .x-recent-posts-img {
+                    &:before { opacity: 1; }
+                    &:after { opacity: 0.85; }
+                }
+            }
+        }
+
+        &.no-image {
+            padding: 0 5px;
+        }
+
+        &.x-recent-post1 {
+            width: 100%;
+        }
+
+        &.x-recent-post2 {
+            width: 48%;
+            @include break(middle-bear) {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 4%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &.x-recent-post3 {
+            width: 30.6666%;
+            @include break(middle-bear) {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 4%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &.x-recent-post4 {
+            width: 22%;
+            @include break(cubs) {
+                width: 48%;
+
+                &:first-child {
+                    margin-bottom: 4%;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 0;
+                    margin-bottom: 4%;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-bottom: 0;
+                }
+            }
+            @include break(middle-bear) {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 4%;
+
+                &:nth-child(3) {
+                    margin-bottom: 4%;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .x-recent-posts-img {
+        position: relative;
+        padding-bottom: 56.25%;
+        background: center center/cover no-repeat;
+
+        &:before,
+        &:after {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            @include transition(#{opacity 0.3s ease});
+        }
+
+        &:before {
+            margin: -30px 0 0 -30px;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            @include font-size(3.2);
+            line-height: 60px;
+            text-align: center;
+            color: $white;
+            z-index: 2;
+            @include font-awesome();
+        }
+
+        &:after {
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $linkColor;
+            border-radius: 2px;
+            z-index: 1;
+        }
+    }
+
+    .no-post-thumbnail {
+        .x-recent-posts-img {
+            &:before { opacity: 0.35; }
+            &:after { opacity: 1; }
+        }
+    }
+
+    .format-standard .x-recent-posts-img:before { content: "\f0f6"; }
+    .format-video .x-recent-posts-img:before { content: "\f008"; }
+    .format-audio .x-recent-posts-img:before { content: "\f001"; }
+    .format-image .x-recent-posts-img:before { content: "\f083"; }
+    .format-gallery .x-recent-posts-img:before { content: "\f03e"; }
+    .format-link .x-recent-posts-img:before { content: "\f0c1"; }
+    .format-quote .x-recent-posts-img:before { content: "\f10d"; }
+    .x-portfolio .x-recent-posts-img:before { content: "\f067"; }
+
+    .x-recent-posts-content {
+        padding: 10px 5px;
+    }
+
+    .h-recent-posts,
+    .x-recent-posts-date {
+        display: block;
+        @include text-overflow();
+    }
+
+    .h-recent-posts {
+        margin: -1px 0 5px;
+        @include font-size(1.7);
+        line-height: 1.2;
+        @include transition(#{color 0.3s ease});
+    }
+
+    .x-recent-posts-date {
+        margin: 0;
+        @include font-size(1.0);
+        line-height: 1;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.65);
+    }
+
+    &.vertical {
+        a {
+            float: none;
+
+            &.x-recent-post1,
+            &.x-recent-post2,
+            &.x-recent-post3,
+            &.x-recent-post4 {
+                width: 100%;
+                margin-bottom: 4%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.js {
+    .x-recent-posts {
+        &[data-fade="true"] {
+            a {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+
+

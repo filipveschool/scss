@@ -1,0 +1,82 @@
+// Accordion Theme X RENEW
+// =============================================================================
+
+.#{$namespace_for_all_css_classes}-accordion {
+    margin-bottom: $baseMargin;
+}
+
+//
+// Group (heading + body).
+//
+
+.#{$namespace_for_all_css_classes}-accordion-group {
+    margin: 0 0 4px;
+    border: 2px solid $shortcode-border-color;
+    @include transition(#{border-color 0.3s ease});
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+//
+// Heading.
+//
+
+.#{$namespace_for_all_css_classes}-accordion-heading {
+    border-bottom: 0;
+
+    .#{$namespace_for_all_css_classes}-accordion-toggle {
+        display: block;
+        padding: 10px 15px;
+        font-size: 124.8%;
+        color: $headingsColor;
+        background-color: darken($base-mod-background, 2%);
+        cursor: pointer;
+
+        &.collapsed {
+            background-color: $base-mod-background;
+
+            &:before {
+                color: darken($shortcode-border-color, 7%);
+                @include rotate(0);
+            }
+        }
+
+        &:hover {
+            background-color: darken($base-mod-background, 2%);
+
+            &:before {
+                color: darken($shortcode-border-color, 7%);
+            }
+        }
+
+        &:before {
+            content: "\f067";
+            position: relative;
+            display: inline-block;
+            bottom: 0.1em;
+            margin-right: 10px;
+            font-size: 74%;
+            -webkit-font-smoothing: antialiased;
+            @include rotate(45deg);
+            @include transition(#{all 0.3s ease});
+            @include font-awesome();
+        }
+    }
+}
+
+//
+// Inner.
+//
+
+.#{$namespace_for_all_css_classes}-accordion-inner {
+    padding: 15px;
+    border-top: 2px solid $shortcode-border-color;
+
+    p:last-child,
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+}

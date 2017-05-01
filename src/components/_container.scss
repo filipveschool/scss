@@ -1,0 +1,24 @@
+// Container
+// =============================================================================
+
+.x-container {
+    margin: 0 auto;
+    @include clearfix();
+
+    &.max {
+        max-width: 1200px;
+    }
+
+    &.width {
+        width: 88%;
+    }
+}
+
+// Shortcode Container Theme X RENEW
+// =============================================================================
+
+.with-container {
+    border: 2px solid $shortcode-border-color;
+    padding: 2.5%;
+    background-color: $base-mod-background;
+}

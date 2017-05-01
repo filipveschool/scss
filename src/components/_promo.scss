@@ -1,0 +1,22 @@
+// Promo Theme X RENEW
+// =============================================================================
+
+.x-promo {
+    margin-bottom: $baseMargin;
+    border: 2px solid $shortcode-border-color;
+    background-color: $base-mod-background;
+}
+
+.x-promo-image-wrap {
+    margin: -2px;
+
+    img {
+        min-width: 100%;
+    }
+}
+
+.x-promo-content {
+    border-top: 2px solid $shortcode-border-color;
+    padding: 1.5em;
+}
+

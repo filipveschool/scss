@@ -1,0 +1,51 @@
+// Quote
+// =============================================================================
+
+//
+// 1. Blockquote.
+// 2. Pullquote.
+// 3. Cite.
+//
+
+// BlockQuote THEME X RENEW
+// =============================================================================
+
+.x-blockquote {  } // 1
+
+// PullQuote THEME X RENEW
+// =============================================================================
+
+.x-pullquote { // 2
+    width: 40%;
+    margin: 0.45em 1.1em 0.55em 0;
+    font-size: 1.313em;
+
+    &.right {
+        margin-right: 0;
+        margin-left: 1.1em;
+    }
+
+    &.left,
+    &.right {
+        @include break(middle-bear) {
+            float: none;
+            width: 100%;
+            margin: $baseMargin 0;
+        }
+    }
+}
+
+// Cite THEME X RENEW
+// =============================================================================
+
+.x-cite { // 3
+    display: block;
+    margin-top: 0.75em;
+    font-size: 0.725em;
+    font-weight: 300;
+    color: $textColor;
+
+    &:before {
+        content: "\2013\00A0";
+    }
+}

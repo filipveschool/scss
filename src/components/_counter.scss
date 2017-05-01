@@ -1,0 +1,27 @@
+// Counter
+// =============================================================================
+
+.x-counter {
+    text-align: center;
+
+    .number-wrap {
+        font-size: 3.25em;
+        line-height: 1;
+    }
+
+    .text-above,
+    .text-below {
+        display: block;
+        letter-spacing: 0.125em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    .text-above {
+        margin-bottom: 0.5em;
+    }
+
+    .text-below {
+        margin-top: 0.5em;
+    }
+}

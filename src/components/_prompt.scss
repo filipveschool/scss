@@ -1,0 +1,81 @@
+// Prompt Theme X RENEW
+// =============================================================================
+
+.x-prompt {
+    margin: 0 0 $baseMargin;
+    border: 10px solid $shortcode-border-color;
+    padding: 1.75em;
+    background-color: $base-mod-background;
+
+    &.message-left {
+        .x-prompt-section.x-prompt-section-message {
+            padding-right: 2.25em;
+            text-align: left;
+        }
+    }
+
+    &.message-right {
+        .x-prompt-section.x-prompt-section-message {
+            padding-left: 2.25em;
+            text-align: right;
+        }
+    }
+}
+
+.x-prompt-section {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    &.x-prompt-section-message {
+        width: 46%;
+        @include font-size(1.6);
+        line-height: 1.4;
+    }
+
+    &.x-prompt-section-button {
+        width: 30%;
+    }
+}
+
+.h-prompt {
+    margin-top: 0;
+    @include font-size(2.8);
+    line-height: 1.1;
+}
+
+@include break(middle-bear) {
+    .x-prompt {
+        display: block;
+
+        &.message-left {
+            .x-prompt-section.x-prompt-section-message {
+                padding: 0 0 1.25em 0;
+            }
+        }
+
+        &.message-right {
+            .x-prompt-section.x-prompt-section-message {
+                padding: 1.25em 0 0 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .x-prompt-section {
+        display: block;
+
+        &.x-prompt-section-message,
+        &.x-prompt-section-button {
+            width: 100%;
+        }
+    }
+}
+
+
+
+

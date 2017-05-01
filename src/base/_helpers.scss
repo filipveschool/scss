@@ -1,0 +1,15 @@
+.textalignright {
+  @include rightalign();
+}
+
+.textalignleft {
+  @include leftalign();
+}
+
+.textaligncenter {
+  @include centeralign();
+}
+
+.hide {
+  display: none;
+}

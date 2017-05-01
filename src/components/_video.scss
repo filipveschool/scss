@@ -1,0 +1,53 @@
+// Video
+// =============================================================================
+
+.x-video {
+    margin-bottom: $baseMargin;
+
+    .x-video-inner {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+
+        &.five-by-three { padding-bottom: 60%; }
+        &.five-by-four { padding-bottom: 80%; }
+        &.four-by-three { padding-bottom: 75%; }
+        &.three-by-two { padding-bottom: 66.67%; }
+
+        embed,
+        iframe,
+        img,
+        object,
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    }
+
+    &.bg {
+        @include transition(#{opacity 1s ease});
+
+        &,
+        & .x-video-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        &.poster {
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    }
+}

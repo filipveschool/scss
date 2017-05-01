@@ -1,0 +1,13 @@
+// Icon List
+// =============================================================================
+
+.#{$namespace_for_all_css_classes}-ul-icons {
+    margin-left: 1.5em;
+    list-style: none;
+
+    li {
+        [class*="#{$fa-css-prefix}-"] {
+            text-indent: -1.5em;
+        }
+    }
+}

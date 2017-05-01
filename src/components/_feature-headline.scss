@@ -1,0 +1,29 @@
+// Feature Headline Theme X Renew
+// =============================================================================
+
+.h-feature-headline {
+    line-height: 1.1;
+
+    span {
+        display: inline-block;
+        position: relative;
+        padding-left: 1.5em;
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 2em;
+            height: 2em;
+            margin-top: -1em;
+            font-size: 0.65em;
+            letter-spacing: 0;
+            line-height: 2em;
+            text-align: center;
+            color: $white;
+            background-color: $headingsColor;
+            border-radius: 100em;
+        }
+    }
+}
+

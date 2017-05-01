@@ -3,7 +3,7 @@
     "title": "Scss-boilerplate",
     "name": "Scss-boilerplate",
     "version", "1.0",
-    "homepage": "https://github.com/filipveschool/scss-boilerplate",
+    "homepage": "https://github.com/filipveschool/scss",
     "description": "Sass Library for myself but be free to use it if you want"
   },
   "autofill": "false"

@@ -1,0 +1,89 @@
+// Image Theme X Renew
+// =============================================================================
+
+.#{$namespace_for_all_css_classes}-img {
+    margin-bottom: $baseMargin;
+
+    &.left {
+        margin: 0.35em $baseMargin 0.35em 0;
+    }
+
+    &.right {
+        margin: 0.35em 0 0.35em $baseMargin;
+    }
+}
+
+//
+// Link hover styles.
+//
+
+a.#{$namespace_for_all_css_classes}-img {
+    display: block;
+
+    > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+a.#{$namespace_for_all_css_classes}-img:not(.#{$namespace_for_all_css_classes}-img-thumbnail) {
+    @include translate3d(0, 0, 0);
+    @include transition(#{opacity 0.3s ease});
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+//
+// Rounded.
+//
+
+.#{$namespace_for_all_css_classes}-img-rounded {
+    &,
+    img {
+        border-radius: 6px;
+    }
+}
+
+//
+// Circle.
+//
+
+.#{$namespace_for_all_css_classes}-img-circle {
+    &,
+    img {
+        border-radius: 100em;
+    }
+}
+
+//
+// Thumbnail.
+//
+
+.#{$namespace_for_all_css_classes}-img-thumbnail {
+    @include img_thumbnail();
+}
+
+a.#{$namespace_for_all_css_classes}-img-thumbnail:hover {
+    border-color: $linkColor;
+}
+
+// Figure
+// =============================
+
+figure {
+
+    img {
+        @include push--auto;
+    }
+}
+
+//TODO margin in orde brengen
+figcaption {
+    //margin: $rel-spacing-unit--small auto 0;
+    font-style: italic;
+    max-width: 30em;
+    text-align: center;
+}

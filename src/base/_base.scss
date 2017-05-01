@@ -1,0 +1,83 @@
+// ------------------------------------------------------------------------
+// ------------------------------------------------------------------------
+// ReactJS specific
+// ------------------------------------------------------------------------
+// ------------------------------------------------------------------------
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  // background-color: #fafafa;
+  min-height: 100%;
+  min-width: 100%;
+
+  background-color: $op_background_color_body;
+
+}
+
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+
+body {
+  //@include font-smoothing;
+  @include font-legibility;
+  // color: $body_text_color;
+  color: $op_text_colour;
+  font-family: $otago-polytechnic-font-name;
+  // background-color: $op_background_color_body;
+
+  //TODO is min-height nodig?
+  min-height: 100%;
+}
+
+/**
+* Basic styles for links
+*/
+a {
+  background: $link_background_color;
+  color: $linkColor;
+  text-decoration: none;
+
+  @include on-event {
+    color: $linkColorHover;
+    text-decoration: underline;
+  }
+}
+
+.links {
+  background: $link_background_color;
+  color: $linkColor;
+  text-decoration: none;
+
+  @include on-event(true) {
+    color: $linkColorHover;
+    text-decoration: underline;
+  }
+}
+
+//.center-title
+
+
+.appwrapper {
+  background-color: $op_background_color_body;
+
+  // van global-styles
+  // padding: 10px 0 60px;
+
+  @include padding(10px 0 60px 0);
+
+  // padding-top: 10px;
+  // padding-right: 0px;
+  // padding-bottom: 60px;
+  // padding-left: 0px;
+
+  // background-color:white;
+  margin: 0 auto;
+  //max-width: 1150px;
+  display: block;
+}

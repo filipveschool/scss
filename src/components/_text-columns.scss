@@ -1,0 +1,16 @@
+// Text Columns
+// =============================================================================
+
+.#{$namespace_for_all_css_classes}-columnize {
+    @include content-columns(2, 3em, 2px solid $shortcode-border-color);
+    margin: 0 0 $baseMargin;
+
+    p:last-child,
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0;
+    }
+
+    @include break(middle-bear) { @include content-columns(1, 0, 0); }
+}
+

@@ -1,0 +1,33 @@
+// Entry Share Theme X Renew
+// =============================================================================
+
+.x-entry-share {
+    margin: 0 0 $baseMargin;
+    border: 2px solid $shortcode-border-color;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+    line-height: 1;
+    text-align: center;
+
+    p {
+        margin: 8px 0 10px;
+        @include font-size(1.2);
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .x-share {
+        display: inline-block;
+        margin: 0 0.05em;
+        width: 45px;
+        height: 45px;
+        @include font-size(2.4);
+        line-height: 45px;
+
+        &:hover {
+            color: #ffffff;
+            background-color: $linkColor;
+        }
+    }
+}

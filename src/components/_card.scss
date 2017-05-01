@@ -1,0 +1,117 @@
+// Card
+// =============================================================================
+
+.x-card-outer {
+    margin: 0 auto $baseMargin;
+    text-align: center;
+    cursor: pointer;
+
+    .x-card-inner {
+        position: relative;
+    }
+
+    .x-face-outer {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &.front { z-index: 2; }
+        &.back { z-index: 1; }
+    }
+
+    .x-face-inner {
+        height: 100%;
+    }
+
+    .x-face-graphic {
+        margin: 0 0 10px;
+        line-height: 1;
+    }
+
+    .x-face-title,
+    .x-face-text {
+        color: inherit;
+    }
+
+    .x-face-title {
+        margin: 0;
+        padding: 0;
+        font-size: 1.75em;
+    }
+
+    .x-face-text {
+        margin: 8px 0 0;
+    }
+
+    .x-face-button {
+        display: inline-block;
+        margin: 15px 0 0;
+        border: 0;
+        padding: 0.825em 1em;
+        line-height: 1;
+        text-decoration: none;
+        border-radius: 0.35em;
+        box-shadow: none;
+    }
+
+    &.flipped {
+        .x-face-outer {
+            &.front { z-index: 1; }
+            &.back { z-index: 2; }
+        }
+    }
+
+    &.center-vertically {
+        .x-face-inner {
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                vertical-align: middle;
+            }
+        }
+
+        .x-face-content {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &.flip-3d {
+        @include perspective(1200px);
+
+        .x-card-inner {
+            -webkit-transition: -webkit-transform 1.25s $easeOutQuint;
+            transition: transform 1.25s $easeOutQuint;
+            @include transform-style(preserve-3d);
+        }
+
+        .x-face-outer {
+            @include backface-visibility(hidden);
+        }
+
+        .x-face-outer.front,
+        .x-face-outer.back,
+        &.flipped .x-face-outer.front,
+        &.flipped .x-face-outer.back {
+            z-index: 1;
+        }
+
+        &.flip-from-left .back,
+        &.flip-from-right .back { @include rotate-y(180deg); }
+        &.flip-from-left.flipped .x-card-inner { @include rotate-y(180deg); }
+        &.flip-from-right.flipped .x-card-inner { @include rotate-y(-180deg); }
+
+        &.flip-from-top .back,
+        &.flip-from-bottom .back { @include rotate-x(180deg); }
+        &.flip-from-top.flipped .x-card-inner { @include rotate-x(-180deg); }
+        &.flip-from-bottom.flipped .x-card-inner { @include rotate-x(180deg); }
+    }
+}
+

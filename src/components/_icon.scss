@@ -1,0 +1,27 @@
+// Icon
+// =============================================================================
+
+[data-x-icon],
+[class*="#{$fa-css-prefix}-"] {
+    display: inline-block;
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.left {
+        margin-right: 0.5em;
+    }
+
+    &.right {
+        margin-left: 0.5em;
+    }
+
+    &:before {
+        content: attr(data-x-icon);
+        line-height: 1;
+    }
+}
