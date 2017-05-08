@@ -39,7 +39,7 @@
                 padding-top: 0;
                 @include font-size(1.6);
                 text-transform: uppercase;
-                color: $navbarLinkColorHover;
+                color: $navbar-link-color-hover;
 
                 > span:after {
                     display: none;

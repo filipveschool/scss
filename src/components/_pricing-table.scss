@@ -3,7 +3,7 @@
 
 .x-pricing-table {
     width: 100%;
-    margin: $baseMargin 0;
+    margin: $base-margin 0;
 
     &.one-column .x-pricing-column { width: 100%; }
     &.two-columns .x-pricing-column { width: 50%; }
@@ -99,7 +99,7 @@
         @include font-size(1.2);
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: lighten($textColor, 25%);
+        color: lighten($text-color, 25%);
     }
 
     p {

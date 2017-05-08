@@ -1,23 +1,23 @@
 //https://github.com/filipveschool/resumewithsass/blob/fd60c981a1d45a6da5e8633f18ce848d88b370ec/assets/sass/thema1/base/_configuresusy.scss
 
 $susy: (
-    //columns: 1 2 3 2 1,
-    //columns: 1 1 1 1 1 1 1 1 1 1 1 1,
-    columns: 12,
-   /* debug: (
-        image: show,
-        color: blue,
-        output: overlay, // dit toont de kleur alleen als je over de toggle-icon hovert rechtsboven
-        //output: background, // dit toont de kleur altijd
-        toggle: top right
-    ),*/
-    gutters:1/8,
-    global-box-sizing: border-box,
-    //output:isolate,
-    output:float,
-    //math: fluid,
+  //columns: 1 2 3 2 1,
+  //columns: 1 1 1 1 1 1 1 1 1 1 1 1,
+        columns: 12,
+  /* debug: (
+       image: show,
+       color: blue,
+       output: overlay, // dit toont de kleur alleen als je over de toggle-icon hovert rechtsboven
+       //output: background, // dit toont de kleur altijd
+       toggle: top right
+   ),*/
+        gutters:1/8,
+        global-box-sizing: border-box,
+  //output:isolate,
+        output:float,
+  //math: fluid,
 );
 
-.container{
-    @include container();
+.container {
+  @include container();
 }

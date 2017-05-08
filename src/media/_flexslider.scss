@@ -73,7 +73,7 @@
 
 .x-flexslider {
     width: 100%;
-    margin: 0 0 $baseMargin;
+    margin: 0 0 $base-margin;
     background: darken($base-mod-background, 10%);
     position: relative;
 }
@@ -151,7 +151,7 @@
         display: block;
         width: 14px;
         height: 14px;
-        background-color: $headingsColor;
+        background-color: $headings-color;
         border-radius: 100em;
 
         &:hover {

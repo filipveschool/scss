@@ -12,7 +12,7 @@
     @return false;
   }
 
-  @if type-of($number) != "number" {
+  @if type-of($number) != 'number' {
     @warn "`#{$number} is not a number`";
     @return false;
   }

@@ -17,7 +17,7 @@
 
 @mixin section() {
   .x-section {
-    margin: 0 0 $baseMargin;
+    margin: 0 0 $base-margin;
     padding: 45px 0;
     @include clearfix();
 
@@ -152,7 +152,7 @@
     }
 
     &[data-fade="true"] {
-      transition: opacity $easeOutQuint, transform $easeOutQuint;
+      transition: opacity $ease-out-quint, transform $ease-out-quint;
     }
   }
 }

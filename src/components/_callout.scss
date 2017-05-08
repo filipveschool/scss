@@ -3,7 +3,7 @@
 
 .x-callout {
     position: relative;
-    margin: $baseMargin 0;
+    margin: $base-margin 0;
     padding: 2.35em;
     @include font-size(2.1);
     background-color: $shortcode-border-color;

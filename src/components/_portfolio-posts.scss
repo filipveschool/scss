@@ -53,7 +53,7 @@
         padding: 25px;
         font-size: 114.2%;
         @include break(middle-bear) {
-            margin-top: $baseMargin + 0.35;
+            margin-top: $base-margin + 0.35;
         }
 
         .x-btn {

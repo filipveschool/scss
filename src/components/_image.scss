@@ -1,15 +1,15 @@
 // Image Theme X Renew
 // =============================================================================
 
-.#{$namespace_for_all_css_classes}-img {
-    margin-bottom: $baseMargin;
+.#{$namespace-for-all-css-classes}-img {
+    margin-bottom: $base-margin;
 
     &.left {
-        margin: 0.35em $baseMargin 0.35em 0;
+        margin: 0.35em $base-margin 0.35em 0;
     }
 
     &.right {
-        margin: 0.35em 0 0.35em $baseMargin;
+        margin: 0.35em 0 0.35em $base-margin;
     }
 }
 
@@ -17,7 +17,7 @@
 // Link hover styles.
 //
 
-a.#{$namespace_for_all_css_classes}-img {
+a.#{$namespace-for-all-css-classes}-img {
     display: block;
 
     > img {
@@ -27,7 +27,7 @@ a.#{$namespace_for_all_css_classes}-img {
     }
 }
 
-a.#{$namespace_for_all_css_classes}-img:not(.#{$namespace_for_all_css_classes}-img-thumbnail) {
+a.#{$namespace-for-all-css-classes}-img:not(.#{$namespace-for-all-css-classes}-img-thumbnail) {
     @include translate3d(0, 0, 0);
     @include transition(#{opacity 0.3s ease});
 
@@ -40,7 +40,7 @@ a.#{$namespace_for_all_css_classes}-img:not(.#{$namespace_for_all_css_classes}-i
 // Rounded.
 //
 
-.#{$namespace_for_all_css_classes}-img-rounded {
+.#{$namespace-for-all-css-classes}-img-rounded {
     &,
     img {
         border-radius: 6px;
@@ -51,7 +51,7 @@ a.#{$namespace_for_all_css_classes}-img:not(.#{$namespace_for_all_css_classes}-i
 // Circle.
 //
 
-.#{$namespace_for_all_css_classes}-img-circle {
+.#{$namespace-for-all-css-classes}-img-circle {
     &,
     img {
         border-radius: 100em;
@@ -62,12 +62,12 @@ a.#{$namespace_for_all_css_classes}-img:not(.#{$namespace_for_all_css_classes}-i
 // Thumbnail.
 //
 
-.#{$namespace_for_all_css_classes}-img-thumbnail {
+.#{$namespace-for-all-css-classes}-img-thumbnail {
     @include img_thumbnail();
 }
 
-a.#{$namespace_for_all_css_classes}-img-thumbnail:hover {
-    border-color: $linkColor;
+a.#{$namespace-for-all-css-classes}-img-thumbnail:hover {
+    border-color: $link-color;
 }
 
 // Figure

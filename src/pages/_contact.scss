@@ -163,15 +163,15 @@
     }
 
     + .radio_control_label {
-      background-color: $op_title_fields_contact_form_background_color_not_checked;
-      color: $op_title_fields_contact_form_text_color_not_checked;
+      background-color: $op-title-fields-contact-form-background-color-not-checked;
+      color: $op-title-fields-contact-form-text-color-not-checked;
     }
 
     &:checked + .radio_control_label {
-      background-color: $op_title_fields_contact_form_background_color_checked;
-      color: $op_title_fields_contact_form_text_color_checked;
+      background-color: $op-title-fields-contact-form-background-color-checked;
+      color: $op-title-fields-contact-form-text-color-checked;
       @include transition(all 0.3s ease-in-out);
-      font-weight: $op_title_fields_contact_form_text_font_weight_checked;
+      font-weight: $op-title-fields-contact-form-text-font-weight-checked;
 
       & .text {
         // font-size: 18px;

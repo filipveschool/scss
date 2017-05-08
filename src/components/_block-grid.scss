@@ -1,10 +1,10 @@
 // Block Grid
 // =============================================================================
 
-.#{$namespace_for_all_css_classes}-block-grid {
+.#{$namespace-for-all-css-classes}-block-grid {
     display: block;
     overflow: hidden;
-    margin: 0 0 $baseMargin;
+    margin: 0 0 $base-margin;
 
     > li {
         display: block;

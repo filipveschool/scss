@@ -29,18 +29,18 @@
 }
 
 @mixin font-family-sans-serif() {
-  font-family: $sansFontFamily;
+  font-family: $sans-font-family;
 }
 
 @mixin font-family-monospace() {
-  font-family: $monoFontFamily;
+  font-family: $mono-font-family;
 }
 
 //
 // Values.
 //
 
-@mixin font-shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+@mixin font-shorthand($size: $base-font-size, $weight: normal, $lineHeight: $base-line-height) {
   font-size: $size;
   font-weight: $weight;
   line-height: $lineHeight;
@@ -50,17 +50,17 @@
 // Defaults.
 //
 
-@mixin font-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+@mixin font-serif($size: $base-font-size, $weight: normal, $lineHeight: $base-line-height) {
   @include font-family-serif();
   @include font-shorthand($size, $weight, $lineHeight);
 }
 
-@mixin font-sans-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+@mixin font-sans-serif($size: $base-font-size, $weight: normal, $lineHeight: $base-line-height) {
   @include font-family-sans-serif();
   @include font-shorthand($size, $weight, $lineHeight);
 }
 
-@mixin font-monospace($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+@mixin font-monospace($size: $base-font-size, $weight: normal, $lineHeight: $base-line-height) {
   @include font-family-monospace();
   @include font-shorthand($size, $weight, $lineHeight);
 }
@@ -109,7 +109,7 @@
 // Placeholder Text
 // =============================================================================
 
-@mixin placeholder($color: $placeholderText) {
+@mixin placeholder($color: $placeholder-text) {
   &::-webkit-input-placeholder {
     color: $color;
   }

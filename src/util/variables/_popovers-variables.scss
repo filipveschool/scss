@@ -2,9 +2,9 @@
 // Popovers
 //
 
-$popoverArrowWidth:         10px                           !default;
-$popoverArrowColor:         $white                         !default;
-$popoverArrowOuterWidth:    $popoverArrowWidth + 1         !default;
-$popoverArrowOuterColor:    rgba(0, 0, 0, 0.25)            !default;
-$popoverBackground:         $white                         !default;
-$popoverTitleBackground:    darken($popoverBackground, 3%) !default;
+$popover-arrow-width: 10px !default;
+$popover-arrow-color: $white !default;
+$popover-arrow-outer-width: $popover-arrow-width + 1 !default;
+$popover-arrow-outer-color: rgba(0, 0, 0, 0.25) !default;
+$popover-background: $white !default;
+$popover-title-background: darken($popover-background, 3%) !default;

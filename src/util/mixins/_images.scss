@@ -16,7 +16,7 @@
 @mixin img_thumbnail() {
   & {
     padding: 4px;
-    line-height: $baseLineHeight;
+    line-height: $base-line-height;
     border: 2px solid $shortcode-border-color;
     background-color: $white;
     @include transition(#{border 0.3s ease, box-shadow 0.3s ease});

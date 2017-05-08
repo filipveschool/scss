@@ -1,5 +1,5 @@
 // retrieve color from $colors map ie. `color(primary, base)`
 @function color($color-name, $color-variant) {
-    // map inception
-    @return map-get(map-get($otago_polytechnic_colors, $color-name), $color-variant);
+  // map inception
+  @return map-get(map-get($otago-polytechnic-colors, $color-name), $color-variant);
 }

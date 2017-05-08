@@ -6,8 +6,8 @@ footer {
   //full betekent volledige breedte ingesteld dus 100%
   @include span(full);
 
-  @if ($footer_background == true) {
-    background-color: $footer_background_color;
+  @if ($footer-background == true) {
+    background-color: $footer-background-color;
   }
 
   @if ($footer_padding_status == true) {

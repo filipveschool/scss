@@ -2,7 +2,7 @@
 // =============================================================================
 
 .x-entry-share {
-    margin: 0 0 $baseMargin;
+    margin: 0 0 $base-margin;
     border: 2px solid $shortcode-border-color;
     border-left: 0;
     border-right: 0;
@@ -27,7 +27,7 @@
 
         &:hover {
             color: #ffffff;
-            background-color: $linkColor;
+            background-color: $link-color;
         }
     }
 }

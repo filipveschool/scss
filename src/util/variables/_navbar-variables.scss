@@ -4,19 +4,19 @@
 // 2. Link and text styles.
 //
 
-$navbarHeight:                     90px                          !default; // 1
-$navbarFixedSideWidth:             228px                         !default; // 1
-$navbarFontSize:                   14px                          !default; // 1
-$navbarDesktopLinkSideSpacing:     1em                           !default; // 1
-$navbarLinkFontWeight:             500                           !default; // 1
-$navbarBackground:                 #2c3e50                       !default; // 1
-$navbarLeftBoxShadow:              2px 0 4px rgba(0, 0, 0, 0.1)  !default; // 1
-$navbarRightBoxShadow:             -2px 0 4px rgba(0, 0, 0, 0.1) !default; // 1
+$navbar-height: 90px !default; // 1
+$navbar-fixed-side-width: 228px !default; // 1
+$navbar-font-size: 14px !default; // 1
+$navbar-desktop-link-side-spacing: 1em !default; // 1
+$navbar-link-font-weight: 500 !default; // 1
+$navbar-background: #2c3e50 !default; // 1
+$navbar-left-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1) !default; // 1
+$navbar-right-box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1) !default; // 1
 
-$navbarLinkColor:                  $white                        !default; // 2
-$navbarLinkColorHover:             $navbarLinkColor              !default; // 2
-$navbarLinkColorActive:            $gray                         !default; // 2
-$navbarLinkBackgroundHover:        transparent                   !default; // 2
-$navbarLinkBackgroundActive:       darken($navbarBackground, 3%) !default; // 2
+$navbar-link-color: $white !default; // 2
+$navbar-link-color-hover: $navbar-link-color !default; // 2
+$navbar-link-color-active: $gray !default; // 2
+$navbar-link-background-hover: transparent !default; // 2
+$navbar-link-background-active: darken($navbar-background, 3%) !default; // 2
 
 

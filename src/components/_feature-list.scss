@@ -2,7 +2,7 @@
 // =============================================================================
 
 .x-feature-list {
-    margin: 0 0 $baseMargin;
+    margin: 0 0 $base-margin;
     padding: 1px 0;
     list-style: none;
     counter-reset: xFeatureListNum;
@@ -17,7 +17,7 @@
 
         &.top-text {
             > div {
-                padding: 0 0 $baseMargin;
+                padding: 0 0 $base-margin;
             }
 
             &:last-child {
@@ -33,11 +33,11 @@
 
         &.middle-text {
             > div {
-                padding: ($baseMargin / 2) 0;
+                padding: ($base-margin / 2) 0;
             }
 
-            &:first-child { margin-top: -($baseMargin / 2); }
-            &:last-child { margin-bottom: -($baseMargin / 2); }
+            &:first-child { margin-top: -($base-margin / 2); }
+            &:last-child { margin-bottom: -($base-margin / 2); }
 
             &:first-child .upper,
             &:last-child .lower {

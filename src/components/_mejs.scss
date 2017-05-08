@@ -35,7 +35,7 @@
 //
 
 .mejs-controls {
-    height: $mejsHeight !important;
+    height: $mejs-height !important;
     border: 1px solid transparent;
 
     //THEME X RENEW specifc
@@ -44,9 +44,9 @@
     > div {
         position: relative;
         float: left;
-        width: $mejsHeightInner;
-        height: $mejsHeightInner;
-        line-height: $mejsHeightInner - 2px;
+        width: $mejs-height-inner;
+        height: $mejs-height-inner;
+        line-height: $mejs-height-inner - 2px;
     }
 }
 
@@ -78,8 +78,8 @@
         margin: 0;
         border: 0;
         padding: 0;
-        width: $mejsHeightInner;
-        height: $mejsHeightInner;
+        width: $mejs-height-inner;
+        height: $mejs-height-inner;
         @include font-size(1.4);
         line-height: inherit;
         text-align: center;
@@ -121,7 +121,7 @@
 //
 
 .mejs-time {
-    width: $mejsAdvancedTimeWidth !important;
+    width: $mejs-advanced-time-width !important;
     @include font-size(1.0);
     text-align: center;
 
@@ -138,7 +138,7 @@
 //
 
 .mejs-time-rail {
-    width: calc(100% - #{$mejsHeightInner}) !important;
+    width: calc(100% - #{$mejs-height-inner}) !important;
     padding: 10px 10px 0;
 }
 
@@ -199,20 +199,20 @@
 
 .advanced-controls.mejs-audio {
     .mejs-time-rail {
-        width: calc(100% - #{$mejsAdvancedTimeRailWidthAudio}) !important;
+        width: calc(100% - #{$mejs-advanced-time-rail-width-audio}) !important;
 
         @include break(middle-bear) {
-            width: calc(100% - #{$mejsAdvancedTimeRailWidthAudio - $mejsAdvancedTimeWidthTotal}) !important;
+            width: calc(100% - #{$mejs-advanced-time-rail-width-audio - $mejs-advanced-time-width-total}) !important;
         }
     }
 }
 
 .advanced-controls.mejs-video {
     .mejs-time-rail {
-        width: calc(100% - #{$mejsAdvancedTimeRailWidthVideo}) !important;
+        width: calc(100% - #{$mejs-advanced-time-rail-width-video}) !important;
 
         @include break(middle-bear) {
-            width: calc(100% - #{$mejsAdvancedTimeRailWidthVideo - $mejsAdvancedTimeWidthTotal}) !important;
+            width: calc(100% - #{$mejs-advanced-time-rail-width-video - $mejs-advanced-time-width-total}) !important;
         }
     }
 }

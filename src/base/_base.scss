@@ -15,7 +15,7 @@ body {
   min-height: 100%;
   min-width: 100%;
 
-  background-color: $op_background_color_body;
+  background-color: $op-background-color-body;
 
 }
 
@@ -27,7 +27,7 @@ body {
   //@include font-smoothing;
   @include font-legibility;
   // color: $body_text_color;
-  color: $op_text_colour;
+  color: $op-text-colour;
   font-family: $otago-polytechnic-font-name;
   // background-color: $op_background_color_body;
 
@@ -39,23 +39,23 @@ body {
 * Basic styles for links
 */
 a {
-  background: $link_background_color;
-  color: $linkColor;
+  background: $link-background-color;
+  color: $link-color;
   text-decoration: none;
 
   @include on-event {
-    color: $linkColorHover;
+    color: $link-color-hover;
     text-decoration: underline;
   }
 }
 
 .links {
-  background: $link_background_color;
-  color: $linkColor;
+  background: $link-background-color;
+  color: $link-color;
   text-decoration: none;
 
   @include on-event(true) {
-    color: $linkColorHover;
+    color: $link-color-hover;
     text-decoration: underline;
   }
 }
@@ -64,7 +64,7 @@ a {
 
 
 .appwrapper {
-  background-color: $op_background_color_body;
+  background-color: $op-background-color-body;
 
   // van global-styles
   // padding: 10px 0 60px;

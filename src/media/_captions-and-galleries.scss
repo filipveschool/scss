@@ -30,7 +30,7 @@
 
 .gallery {
     clear: both;
-    margin: -4% 0 $baseMargin;
+    margin: -4% 0 $base-margin;
     @include clearfix();
 
     .gallery-item {

@@ -22,8 +22,8 @@ $padding-input: rem(6);
 // Base form styling.
 //
 
-$formBaseFontWeight:       300     !default;
-$formActionsBackground:    #f5f5f5 !default;
+$form-base-font-weight:       300     !default;
+$form-actions-background:    #f5f5f5 !default;
 
 
 //
@@ -33,7 +33,7 @@ $formActionsBackground:    #f5f5f5 !default;
 $inputBackground: $base-mod-background !default;
 $inputBorder:                #ddd                !default;
 $inputBorderFocus:           rgba(0, 0, 0, 0.25) !default;
-$inputDisabledBackground:    $grayLighter        !default;
+$inputDisabledBackground: $gray-lighter !default;
 
 
 //

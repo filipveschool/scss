@@ -40,7 +40,7 @@
     width: 27.04926%;
     text-align: right;
     @include break(middle-bear) {
-        margin-top: $baseMargin / 2;
+        margin-top: $base-margin / 2;
     }
 }
 

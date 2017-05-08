@@ -76,8 +76,8 @@ audio:not([controls]) {
 //
 
 html {
-  overflow-x: hidden;
-  font-size: $baseFontSize; // 1
+  font-size: $base-font-size;
+  overflow-x: hidden; // 1
   -webkit-text-size-adjust: 100%; // 2
   -ms-text-size-adjust: 100%; // 2
 }
@@ -88,9 +88,9 @@ html {
 // =============================================================================
 
 a {
-  text-decoration: none;
   background-color: transparent;
-  @include transition($linkTransitions);
+  text-decoration: none;
+  @include transition($link-transitions);
 
   &:focus {
     @include tab-focus();
@@ -113,18 +113,18 @@ a {
 
 sub,
 sup {
-  position: relative;
   font-size: 75%;
   line-height: 0;
+  position: relative;
   vertical-align: baseline;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 
@@ -139,11 +139,11 @@ sub {
 //
 
 img {
-  max-width: 100%; // 1
+  border: 0; // 1
   height: auto;    // 1
-  vertical-align: middle;
-  border: 0; // 2
-  -ms-interpolation-mode: bicubic; // 3
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%; // 2
+  vertical-align: middle; // 3
 }
 
 

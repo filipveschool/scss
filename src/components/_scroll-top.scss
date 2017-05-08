@@ -13,9 +13,9 @@
 // Base Styles
 // =============================================================================
 
-.#{$namespace_for_all_css_classes}-scroll-top {
+.#{$namespace-for-all-css-classes}-scroll-top {
     position: fixed;
-    z-index: $zindexNavbar + 1;
+    z-index: $z-index-navbar + 1;
     bottom: 10px;
     width: 35px;
     height: 35px;

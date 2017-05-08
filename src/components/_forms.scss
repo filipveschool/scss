@@ -26,7 +26,7 @@
 //
 
 form {
-  margin: 0 0 $baseMargin;
+  margin: 0 0 $base-margin;
 }
 
 fieldset {
@@ -61,7 +61,7 @@ button,
 select,
 textarea {
   font-size: 100%;
-  line-height: $baseLineHeight;
+  line-height: $base-line-height;
 }
 
 input,
@@ -79,7 +79,7 @@ textarea {
 label {
   display: block;
   margin-bottom: $labelMarginBottom;
-  color: $op_heading_text_color;
+  color: $op-heading-text-color;
 }
 
 // Form Controls
@@ -110,13 +110,13 @@ input[type="color"],
   height: 2.65em;
   margin-bottom: 9px;
   // border: 2px solid $inputBorder;
-  border: $op_input_control_border;
+  border: $op-input-control-border;
   padding: 0 0.65em;
   @include font-size(1.3);
   line-height: normal;
   color: $gray;
   // background-color: $inputBackground;
-  background-color: $op_input_control_background_color;
+  background-color: $op-input-control-background-color;
 
   // @include span(full);
   width: span(full);

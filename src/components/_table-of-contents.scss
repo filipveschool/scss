@@ -19,13 +19,13 @@
         @include break(baby-bear) {
             width: auto;
             float: none;
-            margin: 0 0 $baseMargin;
+            margin: 0 0 $base-margin;
         }
     }
 
     &.block {
         width: auto;
-        margin: $baseMargin 0;
+        margin: $base-margin 0;
     }
 
     ul {

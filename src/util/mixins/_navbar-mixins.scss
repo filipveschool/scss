@@ -8,7 +8,7 @@
 
 @mixin nav-divider($top: #e5e5e5, $bottom: $white) {
   height: 1px;
-  margin: (($baseLineHeight / 2) - 1) 1px;
+  margin: (($base-line-height / 2) - 1) 1px;
   overflow: hidden;
   background-color: $top;
   border-bottom: 1px solid $bottom;
@@ -27,5 +27,5 @@
 //
 
 @mixin navbar-vertical-align($elementHeight) {
-  margin-top: ($navbarHeight - $elementHeight) / 2;
+  margin-top: ($navbar-height - $elementHeight) / 2;
 }

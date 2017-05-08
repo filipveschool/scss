@@ -2,7 +2,7 @@
 // =============================================================================
 
 .x-recent-posts {
-    margin: 0 0 $baseMargin;
+    margin: 0 0 $base-margin;
 
     + .x-recent-posts {
         margin-top: 4%;
@@ -144,7 +144,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: $linkColor;
+            background-color: $link-color;
             border-radius: 2px;
             z-index: 1;
         }

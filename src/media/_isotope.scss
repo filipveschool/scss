@@ -141,11 +141,11 @@
     text-align: center;
     text-transform: uppercase;
     color: $white;
-    background-color: $linkColor;
+    background-color: $link-color;
 
     &:hover {
         color: $white;
-        background-color: $linkColorHover;
+        background-color: $link-color-hover;
     }
 }
 
@@ -158,9 +158,9 @@
     display: none;
     margin: 0;
     text-align: left;
-    background-color: $navbarBackground;
+    background-color: $navbar-background;
     @include translate3d(0, 0, 0);
-    z-index: $zindexNavbar - 2;
+    z-index: $z-index-navbar - 2;
 
     li {
         display: block;

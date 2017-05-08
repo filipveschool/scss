@@ -1,13 +1,13 @@
 // Tables Renew
 // =============================================================================
 
-$tableBackground: transparent !default;
-$tableBorder: darken($base-mod-background, 5%) !default;
+$table-background: transparent !default;
+$table-border: darken($base-mod-background, 5%) !default;
 
-$table_th_td_border_size: 1px;
-$table_th_td_border_style: solid;
+$table-th-td-border-size: 1px;
+$table-th-td-border-style: solid;
 
-$table_tbody_border_size: 2px;
-$table_tbody_border_style: solid;
+$table-tbody-border-size: 2px;
+$table-tbody-border-style: solid;
 
-$table_td_line_height: 1.4;
+$table-td-line-height: 1.4;

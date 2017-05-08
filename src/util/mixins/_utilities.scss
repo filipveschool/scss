@@ -31,7 +31,7 @@
 
 @mixin tab-focus() {
   outline: thin dotted #333333; // 1
-  outline: 5px auto $linkColor; // 2
+  outline: 5px auto $link-color; // 2
   outline-offset: -1px;
 }
 

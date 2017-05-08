@@ -1,8 +1,8 @@
 // Buttons
 // =============================================================================
 
-$btnBackground:    #ff2a13                     !default;
-$btnBorder:        darken($btnBackground, 20%) !default;
+$btn-background:    #ff2a13                     !default;
+$btn-border:        darken($btn-background, 20%) !default;
 
 // Buttons Renew
 // =============================================================================
@@ -11,16 +11,16 @@ $btnBorder:        darken($btnBackground, 20%) !default;
 // Base button styling.
 //
 
-$btnRenewColor:              $white          !default;
-$btnRenewBorder: $accent-color !default;
-$btnRenewBackground: $accent-color !default;
-$btnRenewColorHover:         $white          !default;
-$btnRenewBorderHover:        $linkColorHover !default;
-$btnRenewBackgroundHover:    $linkColorHover !default;
+$btn-renew-color:              $white          !default;
+$btn-renew-border: $accent-color !default;
+$btn-renew-background: $accent-color !default;
+$btn-renew-color-hover:         $white          !default;
+$btn-renew-border-hover: $link-color-hover !default;
+$btn-renew-background-hover: $link-color-hover !default;
 
 
 //
 // Box shadows.
 //
 
-$btnRenewBoxShadow:    0 0 0 rgba(0, 0, 0, 0), inset 0 0 0 rgba(0, 0, 0, 0) !default;
+$btn-renew-box-shadow:    0 0 0 rgba(0, 0, 0, 0), inset 0 0 0 rgba(0, 0, 0, 0) !default;

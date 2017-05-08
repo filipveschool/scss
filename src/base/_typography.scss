@@ -1,5 +1,3 @@
-
-
 // =============================================================================
 // _TYPE.SCSS
 // -----------------------------------------------------------------------------
@@ -20,30 +18,28 @@
 // =============================================================================
 
 p {
-    margin: 0 0 $baseMargin;
+  margin: 0 0 $base-margin;
 }
 
 // Emphasis
 // =============================================================================
 
 small {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 b,
 strong {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
 cite {
-    font-style: normal;
+  font-style: normal;
 }
-
-
 
 // Lists
 // =============================================================================
@@ -54,45 +50,45 @@ cite {
 
 ul,
 ol {
-    padding: 0;
-    margin: 0 0 $baseMargin 1.655em;
+  padding: 0;
+  margin: 0 0 $base-margin 1.655em;
 }
 
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 ul {
-    list-style: disc;
+  list-style: disc;
 }
 
 ol {
-    list-style: decimal;
+  list-style: decimal;
 }
 
 li {
-    line-height: $baseLineHeight;
+  line-height: $base-line-height;
 }
 
 ul.unstyled,
 ol.unstyled {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 }
 
 ul.inline,
 ol.inline {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 
-    & > li {
-        display: inline-block;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
+  & > li {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 //
@@ -100,20 +96,20 @@ ol.inline {
 //
 
 dl {
-    margin-bottom: $baseMargin;
+  margin-bottom: $base-margin;
 }
 
 dt,
 dd {
-    line-height: $baseLineHeight;
+  line-height: $base-line-height;
 }
 
 dt {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 dd {
-    margin-left: $baseMargin;
+  margin-left: $base-margin;
 }
 
 // Miscellaneous
@@ -124,10 +120,10 @@ dd {
 //
 
 hr {
-    height: 0;
-    margin: $baseMargin 0;
-    border: 0;
-    border-top: 2px solid $shortcode-border-color;
+  height: 0;
+  margin: $base-margin 0;
+  border: 0;
+  border-top: 2px solid $shortcode-border-color;
 }
 
 //
@@ -135,13 +131,13 @@ hr {
 //
 
 abbr[title] {
-    cursor: help;
-    border-bottom: 1px dotted $grayLight;
+  cursor: help;
+  border-bottom: 1px dotted $gray-light;
 }
 
 abbr.initialism {
-    font-size: .9em;
-    text-transform: uppercase;
+  font-size: .9em;
+  text-transform: uppercase;
 }
 
 //
@@ -149,14 +145,14 @@ abbr.initialism {
 //
 
 blockquote {
-    margin: $baseMargin 0;
-    padding: 1em;
-    border: 2px solid $shortcode-border-color;
-    font-family: $altFontFamily;
-    @include font-size(2.4);
-    font-weight: 400;
-    line-height: 1.3;
-    color: $headingsColor;
+  margin: $base-margin 0;
+  padding: 1em;
+  border: 2px solid $shortcode-border-color;
+  font-family: $alt-font-family;
+  @include font-size(2.4);
+  font-weight: 400;
+  line-height: 1.3;
+  color: $headings-color;
 }
 
 //
@@ -167,7 +163,7 @@ q:before,
 q:after,
 blockquote:before,
 blockquote:after {
-    content: "";
+  content: "";
 }
 
 //
@@ -175,8 +171,8 @@ blockquote:after {
 //
 
 address {
-    display: block;
-    margin-bottom: $baseMargin;
-    font-style: normal;
-    line-height: $baseLineHeight;
+  display: block;
+  margin-bottom: $base-margin;
+  font-style: normal;
+  line-height: $base-line-height;
 }

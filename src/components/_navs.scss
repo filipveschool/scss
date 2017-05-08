@@ -17,7 +17,7 @@
 
 .x-nav {
     margin-left: 0;
-    margin-bottom: $baseMargin;
+    margin-bottom: $base-margin;
     list-style: none;
 }
 
@@ -67,7 +67,7 @@
             background-color: lighten($shortcode-border-color, 7.5%);
 
             &:hover {
-                color: $textColor;
+                color: $text-color;
                 background-color: lighten($shortcode-border-color, 7.5%);
             }
         }
@@ -181,7 +181,7 @@
 
 .x-nav-tabs > .active > a,
 .x-nav-tabs > .active > a:hover {
-    color: $textColor;
+    color: $text-color;
     background-color: $white;
     cursor: default;
 }
@@ -257,7 +257,7 @@
 
 .x-tab-content {
     overflow: auto;
-    margin-bottom: $baseMargin;
+    margin-bottom: $base-margin;
     border: 2px solid $shortcode-border-color;
     border-top: 0;
 

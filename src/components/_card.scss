@@ -2,7 +2,7 @@
 // =============================================================================
 
 .x-card-outer {
-    margin: 0 auto $baseMargin;
+    margin: 0 auto $base-margin;
     text-align: center;
     cursor: pointer;
 
@@ -87,8 +87,8 @@
         @include perspective(1200px);
 
         .x-card-inner {
-            -webkit-transition: -webkit-transform 1.25s $easeOutQuint;
-            transition: transform 1.25s $easeOutQuint;
+            -webkit-transition: -webkit-transform 1.25s $ease-out-quint;
+            transition: transform 1.25s $ease-out-quint;
             @include transform-style(preserve-3d);
         }
 

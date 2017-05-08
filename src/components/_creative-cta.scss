@@ -13,7 +13,7 @@
 
     > span {
         display: block;
-        @include transition(#{all 0.65s $easeOutQuint});
+        @include transition(#{all 0.65s $ease-out-quint});
 
         &.text {
             line-height: 1.2;
@@ -29,7 +29,7 @@
 
             > i,
             > img {
-                @include transition(#{all 0.65s $easeOutQuint});
+                @include transition(#{all 0.65s $ease-out-quint});
             }
         }
     }

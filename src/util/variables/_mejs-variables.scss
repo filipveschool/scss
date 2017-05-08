@@ -1,10 +1,10 @@
 // MEJS
 // =============================================================================
 
-$mejsHeight:         32px !default;
-$mejsHeightInner:    30px !default;
+$mejs-height:         32px !default;
+$mejs-height-inner:    30px !default;
 
-$mejsAdvancedTimeWidth:             $mejsHeightInner + 15px                              !default;
-$mejsAdvancedTimeWidthTotal:        $mejsAdvancedTimeWidth * 2                           !default;
-$mejsAdvancedTimeRailWidthAudio:    ($mejsHeightInner * 2) + $mejsAdvancedTimeWidthTotal !default;
-$mejsAdvancedTimeRailWidthVideo:    ($mejsHeightInner * 3) + $mejsAdvancedTimeWidthTotal !default;
+$mejs-advanced-time-width:             $mejs-height-inner + 15px                              !default;
+$mejs-advanced-time-width-total:        $mejs-advanced-time-width * 2                           !default;
+$mejs-advanced-time-rail-width-audio:    ($mejs-height-inner * 2) + $mejs-advanced-time-width-total !default;
+$mejs-advanced-time-rail-width-video:    ($mejs-height-inner * 3) + $mejs-advanced-time-width-total !default;
