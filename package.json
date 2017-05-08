@@ -1,6 +1,6 @@
 {
   "name": "scss-boilerplate",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "SCSS boilerplate with common functions, mixins, helpers, patterns, variables and external libraries",
   "main": "settings.scss",
   "scripts": {
