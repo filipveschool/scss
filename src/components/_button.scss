@@ -78,6 +78,9 @@
 
   &:disabled {
     background-color: grey;
+    // background-color: $op-grey;
+    // border-color: $op-grey;
+    border-color: grey;
   }
 
   &.x-btn-remove {
@@ -196,5 +199,46 @@
   [class*="#{$fa-css-prefix}-"] {
     display: inline;
     margin: 0 0.5em 0 0;
+  }
+}
+
+// Better ==> BEM STYLE
+
+@include block(button) {
+
+  @include element(jumbo) {
+    @include padding(0.643em 1.429em 0.786em);
+    //padding: 0.643em 1.429em 0.786em;
+    @include font-size(2.8);
+  }
+
+  @include element(xlarge) {
+    @include padding(0.714em 1.286em 0.857em);
+    //padding: 0.714em 1.286em 0.857em;
+    @include font-size(2.1);
+  }
+
+  @include element(large) {
+    @include padding(0.579em 1.105em 0.842em);
+    //padding: 0.579em 1.105em 0.842em;
+    @include font-size(1.9);
+  }
+
+  @include element(regular) {
+    @include padding(0.563em 1.125em 0.813em);
+    //padding: 0.563em 1.125em 0.813em;
+    @include font-size(1.6);
+  }
+
+  @include element(small) {
+    @include padding(0.429em 1.143em 0.643em);
+    //padding: 0.429em 1.143em 0.643em;
+    @include font-size(1.4);
+  }
+
+  @include element(mini) {
+    @include padding(0.385em 0.923em 0.538em);
+    //padding: 0.385em 0.923em 0.538em;
+    @include font-size(1.3);
   }
 }

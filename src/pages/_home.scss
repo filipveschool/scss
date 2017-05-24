@@ -18,6 +18,11 @@
     text-align: center;
   }
 
+  @include breakpoint($ipad-pair-landscape) {
+    max-width: span(full);
+    margin: 0 20px;
+  }
+
   // ipad 768 height op 1024 width
   // @include mappy-bp(max-width tablet-wide) {
   @include mappy-bp(max-width tablet_wide) {
@@ -265,4 +270,8 @@
   h1 {
   }
 
+}
+
+.footer-button-margin {
+  margin-right: 20px;
 }

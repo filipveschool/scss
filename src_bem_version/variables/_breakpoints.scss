@@ -1,0 +1,17 @@
+// Example of breakpoint sass-map
+$breakpoints: (
+        small: 400px,
+        small-wide: 480px,
+        phablet: 560px,
+        med: 640px,
+        tablet: 768px, // ipad portrait width
+        large: 900px,
+        wide: 1100px,
+        mega: 1800px,
+        ultra: 2800px,
+);
+
+// To use the breakpoints from the map, I use the function mappy-breakpoints from the library mappy-breakpoints
+// .component {
+//    @include mappy-breakpoint(small) { /* Styles here */ }
+// }

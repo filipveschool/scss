@@ -10,8 +10,8 @@ footer {
     background-color: $footer-background-color;
   }
 
-  @if ($footer_padding_status == true) {
-    @include padding($footer_padding_top $footer_padding_right $footer_padding_bottom $footer_padding_left);
+  @if ($footer-padding-status == true) {
+    @include padding($footer-padding-top $footer_padding_right $footer_padding_bottom $footer_padding_left);
   }
 
   @if ($footer_text_align_status == true) {
@@ -25,21 +25,18 @@ footer {
 
     //@include show-grid(background);
 
-
-    & .column-1{
+    & .column-1 {
       @include span(5 at 1);
       //@include span(5 of 12);
       //@include span(3);
     }
-    & .column-2{
+    & .column-2 {
       //@include span(5 of 12 last);
       @include span(5 at 6 last);
     }
 
   }
 }
-
-
 
 // ------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------
@@ -58,3 +55,28 @@ footer {
 */
 
 //@import "footer/_footer-1";
+
+// BEM
+
+footer {
+  // For sticky footer
+  // https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551
+   position: absolute;
+  // end sticky footer
+
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  // background-color: #efefef;
+  text-align: center;
+
+  @include block('section') { // footer .section ==> is de classname dat wordt gemaakt
+    content: 'footer section';
+
+    @include element('link') { // footer .section__link ==> is de classname dat wordt gemaakt
+      content: 'footer .section .link';
+    }
+  }
+}

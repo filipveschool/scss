@@ -1,8 +1,8 @@
 $footer-background: true;
-$footer-background-color: color(blue_series, op_blue_rgb);
+$footer-background-color: $op-grey-footer-background-color;
 
-$footer_padding_status: true;
-$footer_padding_top: null;
+$footer-padding-status: true;
+$footer-padding-top: null;
 $footer_padding_right: 15px;
 $footer_padding_bottom: null;
 $footer_padding_left: 15px;
@@ -11,3 +11,5 @@ $footer_text_align_status: true;
 $footer_text_align: center;
 
 $footer_text_color: color(black_series, op_black_hex);
+
+

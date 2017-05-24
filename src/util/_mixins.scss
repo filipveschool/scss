@@ -42,6 +42,7 @@
 @import 'mixins/centering';
 @import 'mixins/clearfix';
 @import 'mixins/ellipsis';
+@import 'mixins/floating';
 @import 'mixins/font-stacks';
 @import 'mixins/forms';
 @import 'mixins/grid';
@@ -77,10 +78,13 @@
 @import 'mixins/typography/font-legibility';
 @import 'mixins/typography/font-smoothing';
 @import 'mixins/typography/font-mixins';
+
 // bootstrap 4 mixins
 @import 'mixins/grid/bootstrap_breakpoints_mixins';
 @import 'mixins/grid/grid-framework';
 @import 'mixins/grid/grid';
+
+
 
 /// Event wrapper
 /// @author Harry Roberts

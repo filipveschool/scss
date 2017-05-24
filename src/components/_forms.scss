@@ -78,7 +78,7 @@ textarea {
 
 label {
   display: block;
-  margin-bottom: $labelMarginBottom;
+  margin-bottom: $label-margin-bottom;
   color: $op-heading-text-color;
 }
 
@@ -299,6 +299,13 @@ textarea {
   margin-left: 10px; // 1
 }
 
+// RADIO HACK
+
+.radioinput {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 // Disabled State
 // =============================================================================
 
@@ -417,3 +424,103 @@ input[type="file"] {
   line-height: 16px;
   border-radius: 0;
 }
+
+//===================================================================
+//===================================================================
+//===================================================================
+
+
+
+select {
+
+  background-color: $op-select-dropdown-background-color;
+
+}
+
+$border-select: 10px;
+$margin-arrow-before-after: -5px;
+$right-arr-before: 16px;
+$right-arr-after: 20px;
+
+.select {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+
+  .arr {
+    background-color: $op-select-dropdown-arrow-background-color;
+    bottom: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 50px;
+    pointer-events: none;
+    margin: -5px;
+    border-top-right-radius: $border-select;
+    border-bottom-right-radius: $border-select;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      // right: 24px;
+      right: $right-arr-before;
+      margin-top: -5px;
+      pointer-events: none;
+      // border-top: 10px solid #EB5168;
+      border-top: 10px solid $white;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      // right: 28px;
+      right: $right-arr-after;
+      margin-top: -5px;
+      pointer-events: none;
+      border-top: 6px solid $white;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+  }
+}
+
+.select select {
+  // bijgevoegd
+
+  outline: none;
+  -webkit-appearance: none;
+  display: block;
+  // padding: 1.2em 3em 1.3em 1.5em;
+  // padding-top: 1.2em;
+  padding-top: 0.2em;
+  padding-right: 3em;
+  padding-left: 1.5em;
+  // padding-bottom: 1.3em;
+  padding-bottom: 0.3em;
+  margin: 0;
+  transition: border-color 0.2s;
+  // border: 5px solid #EB5168;
+  border-radius: 10px;
+  // background: $white;
+  color: $white;
+  line-height: normal;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  // bijgevoegd einde
+
+  &:focus {
+    border-color: #1A70FF;
+
+    + .arr::before {
+      border-top-color: #1A70FF;
+    }
+  }
+
+}
+
+

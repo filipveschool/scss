@@ -1,0 +1,24 @@
+//
+// Dropdowns.
+// 1. Base styles.
+// 2. Positioning.
+// 3. Links.
+// 4. Dividers.
+//
+
+$dropdown-border:                  1px solid rgba(0, 0, 0, 0.2)  !default; // 1
+$dropdown-padding:                 1.75em                        !default; // 1
+$dropdown-background:              $white                        !default; // 1
+$dropdown-box-shadow:               0 2px 5px rgba(0, 0, 0, 0.25) !default; // 1
+
+$dropdown-first-side:               100%                !default; // 2
+$dropdown-top:                     -1.75em             !default; // 2
+$dropdown-offset:                  calc(100% + 1.75em) !default; // 2
+
+$dropdown-link-padding:             0.5em 0                       !default; // 3
+$dropdown-link-color: $navbar-link-color !default; // 3
+$dropdown-link-color-active: $navbar-link-color-hover !default; // 3
+$dropdown-link-color-hover: $navbar-link-color-hover !default; // 3
+$dropdown-link-background-active:    #f5f5f5                       !default; // 3
+$dropdown-link-background-hover: $dropdown-link-background-active !default; // 3
+

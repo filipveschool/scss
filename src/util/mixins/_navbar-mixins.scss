@@ -27,5 +27,5 @@
 //
 
 @mixin navbar-vertical-align($elementHeight) {
-  margin-top: ($navbar-height - $elementHeight) / 2;
+  margin-top: ($navbarHeight - $elementHeight) / 2;
 }

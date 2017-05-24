@@ -1,0 +1,23 @@
+@mixin floatleft(){
+  float: left;
+}
+
+@mixin floatright(){
+  float: right;
+}
+
+@mixin floatnone(){
+  float: none;
+}
+
+@mixin clearboth(){
+  clear: both;
+}
+
+@mixin clearleft(){
+  clear: left;
+}
+
+@mixin clearright(){
+  clear: right;
+}

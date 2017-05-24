@@ -70,16 +70,19 @@ $pair: 456px 794px;
     // dit is voor te centreren.
     margin: 0 auto;
 
-    // TODO content verwijderen
+    @include breakpoint($ipad-pair-landscape) {
+      max-width: span(full);
+      // margin: 0 20px;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
     @include mappy-bp(max-width tablet_wide) {
-      content: 'ipad 768 height op 1024 width';
       max-width: span(full);
       padding-left: 20px;
     }
 
-    // TODO content verwijderen
     @include mappy-bp(max-width tablet) {
-      content: 'ipad 1024 height op 768 width';
       max-width: span(full);
       padding-left: 20px;
     }
@@ -115,7 +118,7 @@ $pair: 456px 794px;
   }
 
   .navbar_link {
-    padding-right: 20px;
+    padding-right: 60px;
   }
 
   .home_icon {
@@ -145,15 +148,15 @@ $cross-reso: max-resolution 144dpi;
 
 .appwrapper .background_banner_header {
   @include breakpoint($hidpi) {
-    content: 'Device Pixel Ratio of at least 1.5';
+    // content: 'Device Pixel Ratio of at least 1.5';
     // background: url("/Kotahitaka.png") repeat-x scroll -18px 53px white;
-    background-size: 218px 72px;
+    // background-size: 218px 72px;
   }
 
   @include breakpoint($cross-reso) {
-    content: 'Cross Browser Resolution Query';
+    // content: 'Cross Browser Resolution Query';
     // background: url(/Kotahitaka.png) repeat-x scroll -18px 53px white;
-    background-size: 218px 72px;
+    // background-size: 218px 72px; // werkende versie
   }
 }
 

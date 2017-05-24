@@ -14,57 +14,57 @@
 // =============================================================================
 
 .x-topbar {
-    position: relative;
-    min-height: 46px;
-    padding: 6px 0;
-    background-color: darken($navbar-background, 7%);
-    z-index: $z-index-navbar + 1;
-    @include clearfix();
+  @include clearfix();
+  position: relative;
+  min-height: 46px;
+  padding: 6px 0;
+  background-color: darken($navbar-background, 7%);
+  z-index: $z-index-navbar + 1;
 
-    .p-info {
-        float: left;
-        margin: 8px 0 0;
-        @include font-size(1.1);
-        letter-spacing: 1px;
-        line-height: 1.3;
+  .p-info {
+    float: left;
+    margin: 8px 0 0;
+    @include font-size(1.1);
+    letter-spacing: 1px;
+    line-height: 1.3;
+    color: $navbar-link-color;
+    @include break(middle-bear) {
+      float: none;
+      margin: 4px 0 11px;
+      text-align: center;
+    }
+
+    a {
+      color: $navbar-link-color;
+
+      &:hover {
         color: $navbar-link-color;
-        @include break(middle-bear) {
-            float: none;
-            margin: 4px 0 11px;
-            text-align: center;
-        }
+      }
+    }
+  }
 
-        a {
-            color: $navbar-link-color;
-
-            &:hover {
-                color: $navbar-link-color;
-            }
-        }
+  .x-social-global {
+    float: right;
+    @include break(middle-bear) {
+      float: none;
+      margin-bottom: 6px;
+      text-align: center;
     }
 
-    .x-social-global {
-        float: right;
-        @include break(middle-bear) {
-            float: none;
-            margin-bottom: 6px;
-            text-align: center;
-        }
+    a {
+      margin-left: 6px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      @include font-size(1.8);
+      @include break(middle-bear) {
+        margin: 0 1%;
+      }
 
-        a {
-            margin-left: 6px;
-            width: 32px;
-            height: 32px;
-            line-height: 32px;
-            text-align: center;
-            @include font-size(1.8);
-            @include break(middle-bear) {
-                margin: 0 1%;
-            }
-
-            &.foursquare {
-                @include font-size(1.7);
-            }
-        }
+      &.foursquare {
+        @include font-size(1.7);
+      }
     }
+  }
 }

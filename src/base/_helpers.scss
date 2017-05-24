@@ -13,3 +13,27 @@
 .hide {
   display: none;
 }
+
+.floatleft {
+  @include floatleft();
+}
+
+.floatright {
+  @include floatright();
+}
+
+.floatnone {
+  @include floatnone();
+}
+
+.clearboth {
+  @include clearboth();
+}
+
+.clearleft {
+  @include clearleft();
+}
+
+.clearright {
+  @include clearright();
+}

@@ -56,18 +56,37 @@
 .contactform {
 
   .column_1 {
-    content: 'Column 1';
+    // content: 'Column 1';
     // max-width: span(4 at 2);
     // max-width: span(4);
-    @include span(5);
+
+    // @include span(5);
+    float: left;
+    width: span(5);
+    // margin-right: span(1 wide);
+    // @include pre(25%);
+    // @include push(25%);
+
+    /*
+        width: 41.12149533%;
+    float: left;
+    margin-right: 0.93457944%;
+     */
+
+    margin-right: 4%;
   }
 
   .column_2 {
-    content: 'Column 1';
+    // content: 'Column 1';
     // max-width: span(4 at 7);
     // max-width: span(4);
 
-    @include span(5);
+    // @include span(5);
+
+    // @include span(full);
+    @include span(6);
+    // width: span(5);
+
   }
 }
 
@@ -160,18 +179,23 @@
 
     + label {
       // width: span(3);
+      // label {
+        display: block;
+        margin-bottom: $label-margin-bottom;
+        color: $op-heading-text-color;
+      // }
     }
 
     + .radio_control_label {
-      background-color: $op-title-fields-contact-form-background-color-not-checked;
-      color: $op-title-fields-contact-form-text-color-not-checked;
+      background-color: $op_title_fields_contact_form_background_color_not_checked;
+      color: $op_title_fields_contact_form_text_color_not_checked;
     }
 
     &:checked + .radio_control_label {
-      background-color: $op-title-fields-contact-form-background-color-checked;
-      color: $op-title-fields-contact-form-text-color-checked;
+      background-color: $op_title_fields_contact_form_background_color_checked;
+      color: $op_title_fields_contact_form_text_color_checked;
       @include transition(all 0.3s ease-in-out);
-      font-weight: $op-title-fields-contact-form-text-font-weight-checked;
+      font-weight: $op_title_fields_contact_form_text_font_weight_checked;
 
       & .text {
         // font-size: 18px;
@@ -245,8 +269,14 @@
     margin-top: -10px;
     margin-left: 10px;
   }
+
+  .datepicker {
+    float: left;
+    margin-right: 1%;
+  }
 }
 
+//.dob .datepicker
 input[type="date"] {
   // width: span(6);
   @include span(6);
@@ -263,7 +293,6 @@ input[type="date"] {
 .emailaddressform {
   @include span(6 last);
 }
-
 
 .calendarsvg {
   width: 40px;
@@ -373,4 +402,72 @@ input[type="date"] {
   }
 }
 
+// ===========================================
+// ===========================================
+// ===========================================
+// dropdownlist
 
+.study_options__dropdown {
+  margin-top: 39px;
+  margin-bottom: 28px;
+}
+
+// =====
+
+.contactform h6 {
+  // margin-top: 1.3em;
+  margin-top: 1em;
+}
+
+.contactform .study_options_area h6 {
+  margin-bottom: 0;
+}
+
+.contactform .submit_button {
+  margin-top: 2.2em;
+  border-color: $op-green-button-color;
+
+  &:disabled {
+    border-color: grey;
+  }
+}
+
+// =================================
+
+.chosenstudyoptionvalue,
+.chosenprogrammeoptionvalue {
+  padding-left: 20px;
+  margin-right: 20px;
+}
+
+
+.removebutton-chosenstudyoptionvalue,
+.removebutton-chosenprogrammeoptionvalue {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-right: 20px;
+  color: $op-remove-button-red;
+  float: right;
+}
+
+
+.collection-chosenstudyoptions,
+.collection-chosenprogrammeoption {
+  background-color: $op-grey;
+}
+
+
+.removestudyoptionbutton {
+
+}
+
+//========================
+
+.bordernone {
+  border: 0;
+}
+
+.contactform textarea {
+  width: 100%;
+}

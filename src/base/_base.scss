@@ -8,14 +8,24 @@ html,
 body {
   height: 100%;
   width: 100%;
+
+  // For sticky footer
+  // https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551
+  position: relative;
 }
 
 #app {
   // background-color: #fafafa;
   min-height: 100%;
   min-width: 100%;
-
   background-color: $op-background-color-body;
+
+  // For sticky footer
+  // https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551
+  overflow: hidden;
+  display: block;
+  padding-bottom: 100px;
+  position: relative;
 
 }
 

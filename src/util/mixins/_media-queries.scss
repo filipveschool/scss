@@ -21,37 +21,37 @@
 @mixin break($point) {
 
   @if $point == baby-bear {
-    @media (max-width: $breakSmall) {
+    @media (max-width: $break-small) {
       @content;
     }
   }
 
   @else if $point == middle-bear {
-    @media (max-width: $breakMedium) {
+    @media (max-width: $break-medium) {
       @content;
     }
   }
 
   @else if $point == old-bear {
-    @media (min-width: $breakMedium + 1) and (max-width: $breakMediumLarge) {
+    @media (min-width: $break-medium + 1) and (max-width: $break-medium-large) {
       @content;
     }
   }
 
   @else if $point == cubs {
-    @media (max-width: $breakMediumLarge) {
+    @media (max-width: $break-medium-large) {
       @content;
     }
   }
 
   @else if $point == mama-bear {
-    @media (min-width: $breakMediumLarge + 1) {
+    @media (min-width: $break-medium-large + 1) {
       @content;
     }
   }
 
   @else if $point == papa-bear {
-    @media (min-width: $breakLarge) {
+    @media (min-width: $break-large) {
       @content;
     }
   }
